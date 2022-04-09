@@ -1,0 +1,43 @@
+Version 9.0 Build 132 02/25/2009 SJ Full Version
+42
+3159
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+TP
+# storage
+db|TP.(0).cnf
+db|TP.(0).cnf
+# case_insensitive
+# source_file
+TP.tdf
+c03bce32a32a5f3f147f09e68d86616
+7
+# used_port {
+0
+-1
+0
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

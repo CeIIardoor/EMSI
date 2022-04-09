@@ -1,0 +1,38 @@
+C:\Users\Electro Fatal\source\repos\Gestion librairie\Gestion librairie\bin\Debug\net5.0-windows\librairie.exe
+C:\Users\Electro Fatal\source\repos\Gestion librairie\Gestion librairie\bin\Debug\net5.0-windows\librairie.deps.json
+C:\Users\Electro Fatal\source\repos\Gestion librairie\Gestion librairie\bin\Debug\net5.0-windows\librairie.runtimeconfig.json
+C:\Users\Electro Fatal\source\repos\Gestion librairie\Gestion librairie\bin\Debug\net5.0-windows\librairie.runtimeconfig.dev.json
+C:\Users\Electro Fatal\source\repos\Gestion librairie\Gestion librairie\bin\Debug\net5.0-windows\librairie.dll
+C:\Users\Electro Fatal\source\repos\Gestion librairie\Gestion librairie\bin\Debug\net5.0-windows\ref\librairie.dll
+C:\Users\Electro Fatal\source\repos\Gestion librairie\Gestion librairie\bin\Debug\net5.0-windows\librairie.pdb
+C:\Users\Electro Fatal\source\repos\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\librairie.vbprojAssemblyReference.cache
+C:\Users\Electro Fatal\source\repos\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\Gestion_librairie.Form1.resources
+C:\Users\Electro Fatal\source\repos\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\librairie.vbproj.GenerateResource.cache
+C:\Users\Electro Fatal\source\repos\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\librairie.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Electro Fatal\source\repos\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\librairie.AssemblyInfoInputs.cache
+C:\Users\Electro Fatal\source\repos\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\librairie.AssemblyInfo.vb
+C:\Users\Electro Fatal\source\repos\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\librairie.vbproj.CoreCompileInputs.cache
+C:\Users\Electro Fatal\source\repos\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\librairie.dll
+C:\Users\Electro Fatal\source\repos\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\ref\librairie.dll
+C:\Users\Electro Fatal\source\repos\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\librairie.pdb
+C:\Users\Electro Fatal\source\repos\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\librairie.genruntimeconfig.cache
+C:\Users\Electro Fatal\source\repos\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\Gestion_librairie.Resources.resources
+C:\Users\Electro Fatal\Desktop\EMSI\Projet S4- Programmation Evenementielle\Gestion librairie\Gestion librairie\bin\Debug\net5.0-windows\librairie.exe
+C:\Users\Electro Fatal\Desktop\EMSI\Projet S4- Programmation Evenementielle\Gestion librairie\Gestion librairie\bin\Debug\net5.0-windows\librairie.deps.json
+C:\Users\Electro Fatal\Desktop\EMSI\Projet S4- Programmation Evenementielle\Gestion librairie\Gestion librairie\bin\Debug\net5.0-windows\librairie.runtimeconfig.json
+C:\Users\Electro Fatal\Desktop\EMSI\Projet S4- Programmation Evenementielle\Gestion librairie\Gestion librairie\bin\Debug\net5.0-windows\librairie.runtimeconfig.dev.json
+C:\Users\Electro Fatal\Desktop\EMSI\Projet S4- Programmation Evenementielle\Gestion librairie\Gestion librairie\bin\Debug\net5.0-windows\librairie.dll
+C:\Users\Electro Fatal\Desktop\EMSI\Projet S4- Programmation Evenementielle\Gestion librairie\Gestion librairie\bin\Debug\net5.0-windows\ref\librairie.dll
+C:\Users\Electro Fatal\Desktop\EMSI\Projet S4- Programmation Evenementielle\Gestion librairie\Gestion librairie\bin\Debug\net5.0-windows\librairie.pdb
+C:\Users\Electro Fatal\Desktop\EMSI\Projet S4- Programmation Evenementielle\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\librairie.vbprojAssemblyReference.cache
+C:\Users\Electro Fatal\Desktop\EMSI\Projet S4- Programmation Evenementielle\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\Gestion_librairie.Form1.resources
+C:\Users\Electro Fatal\Desktop\EMSI\Projet S4- Programmation Evenementielle\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\Gestion_librairie.Resources.resources
+C:\Users\Electro Fatal\Desktop\EMSI\Projet S4- Programmation Evenementielle\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\librairie.vbproj.GenerateResource.cache
+C:\Users\Electro Fatal\Desktop\EMSI\Projet S4- Programmation Evenementielle\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\librairie.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Electro Fatal\Desktop\EMSI\Projet S4- Programmation Evenementielle\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\librairie.AssemblyInfoInputs.cache
+C:\Users\Electro Fatal\Desktop\EMSI\Projet S4- Programmation Evenementielle\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\librairie.AssemblyInfo.vb
+C:\Users\Electro Fatal\Desktop\EMSI\Projet S4- Programmation Evenementielle\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\librairie.vbproj.CoreCompileInputs.cache
+C:\Users\Electro Fatal\Desktop\EMSI\Projet S4- Programmation Evenementielle\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\librairie.dll
+C:\Users\Electro Fatal\Desktop\EMSI\Projet S4- Programmation Evenementielle\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\ref\librairie.dll
+C:\Users\Electro Fatal\Desktop\EMSI\Projet S4- Programmation Evenementielle\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\librairie.pdb
+C:\Users\Electro Fatal\Desktop\EMSI\Projet S4- Programmation Evenementielle\Gestion librairie\Gestion librairie\obj\Debug\net5.0-windows\librairie.genruntimeconfig.cache

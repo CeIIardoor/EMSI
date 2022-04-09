@@ -1,0 +1,12 @@
+C:\Users\Lenovo\source\repos\gestion resto\gestion resto\obj\Debug\netcoreapp3.1\gestion resto.vbprojAssemblyReference.cache
+C:\Users\Lenovo\source\repos\gestion resto\gestion resto\obj\Debug\netcoreapp3.1\gestion_resto.Form1.resources
+C:\Users\Lenovo\source\repos\gestion resto\gestion resto\obj\Debug\netcoreapp3.1\gestion resto.vbproj.GenerateResource.cache
+C:\Users\Lenovo\source\repos\gestion resto\gestion resto\obj\Debug\netcoreapp3.1\gestion resto.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\repos\gestion resto\gestion resto\obj\Debug\netcoreapp3.1\gestion resto.AssemblyInfo.vb
+C:\Users\Lenovo\source\repos\gestion resto\gestion resto\obj\Debug\netcoreapp3.1\gestion resto.vbproj.CoreCompileInputs.cache
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\obj\Debug\netcoreapp3.1\gestion resto.vbprojAssemblyReference.cache
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\obj\Debug\netcoreapp3.1\gestion_resto.Form1.resources
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\obj\Debug\netcoreapp3.1\gestion resto.vbproj.GenerateResource.cache
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\obj\Debug\netcoreapp3.1\gestion resto.AssemblyInfoInputs.cache
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\obj\Debug\netcoreapp3.1\gestion resto.AssemblyInfo.vb
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\obj\Debug\netcoreapp3.1\gestion resto.vbproj.CoreCompileInputs.cache

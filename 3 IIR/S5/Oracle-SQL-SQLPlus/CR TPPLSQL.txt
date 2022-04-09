@@ -1,0 +1,14 @@
+UPDATE clients SET ville = 'Casablanca' WHERE nom = 'Rafi';
+UPDATE produit SET prix = prix*1.2 WHERE prix < 100;
+COMMIT;
+DELETE FROM clients WHERE numcli = 1;
+Supprimé de la vue aussi
+DELETE FROM commande WHERE datecom < '01/01/01';
+Le format est 'YYYY/MM/DD'
+SELECT * FROM Clients;
+SELECT nom, tel FROM clients WHERE ville = 'Rabat';
+SELECT nom FROM clients WHERE prenom = 'Hamid' || prenom = 'Mustapha';
+SELECT prix, designation FROM produit WHERE qtestock>500; 
+SELECT * FROM commande WHERE datecom>'99/10/10' AND datecom<'03/10/10' ORDER BY numcom asc; 
+SELECT nom FROM clients WHERE nom LIKE 'M%';
+SELECT nom FROM clients WHERE tel = '';

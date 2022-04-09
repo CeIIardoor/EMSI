@@ -1,0 +1,42 @@
+Version 9.0 Build 132 02/25/2009 SJ Full Version
+42
+3159
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+circuit
+# storage
+db|circuit.(0).cnf
+db|circuit.(0).cnf
+# case_insensitive
+# source_file
+circuit.bdf
+329d52e55d9dcd1d96b4828cf56859f
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

@@ -1,0 +1,18 @@
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\obj\Debug\net5.0-windows\gestion resto.vbprojAssemblyReference.cache
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\obj\Debug\net5.0-windows\gestion_resto.Form1.resources
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\obj\Debug\net5.0-windows\gestion resto.vbproj.GenerateResource.cache
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\obj\Debug\net5.0-windows\gestion resto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\obj\Debug\net5.0-windows\gestion resto.AssemblyInfoInputs.cache
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\obj\Debug\net5.0-windows\gestion resto.AssemblyInfo.vb
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\obj\Debug\net5.0-windows\gestion resto.vbproj.CoreCompileInputs.cache
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\bin\Debug\net5.0-windows\gestion resto.exe
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\bin\Debug\net5.0-windows\gestion resto.deps.json
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\bin\Debug\net5.0-windows\gestion resto.runtimeconfig.json
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\bin\Debug\net5.0-windows\gestion resto.runtimeconfig.dev.json
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\bin\Debug\net5.0-windows\gestion resto.dll
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\bin\Debug\net5.0-windows\ref\gestion resto.dll
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\bin\Debug\net5.0-windows\gestion resto.pdb
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\obj\Debug\net5.0-windows\gestion resto.dll
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\obj\Debug\net5.0-windows\ref\gestion resto.dll
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\obj\Debug\net5.0-windows\gestion resto.pdb
+C:\Users\Electro Fatal\Desktop\gestion resto\gestion resto\obj\Debug\net5.0-windows\gestion resto.genruntimeconfig.cache
