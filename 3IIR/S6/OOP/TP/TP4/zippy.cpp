@@ -109,8 +109,8 @@ public:
         ajouter_client(client);
     };
 
-    Client* operator[](int i){
-        return liste_clients[i];
+    Client* operator[](int cin){
+        return liste_clients[cin];
     };
 
     ~Societe(){};

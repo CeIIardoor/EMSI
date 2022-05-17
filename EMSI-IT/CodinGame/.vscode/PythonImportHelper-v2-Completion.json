@@ -1,0 +1,136 @@
+[
+    {
+        "label": "randint",
+        "importPath": "random",
+        "description": "random",
+        "isExtraImport": true,
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "cg",
+        "description": "cg",
+        "peekOfCode": "a = 0\nn = int(input())\nfor i in range(n):\n    x, y = [int(j) for j in input().split(\" \")]\n# Initialize area\narea = 0.0\n# Calculate value of shoelace formula\nj = n - 1\nfor i in range(0,n):\n    area += (x[j] + x[i]) * (y[j] - y[i])",
+        "detail": "cg",
+        "documentation": {}
+    },
+    {
+        "label": "n",
+        "kind": 5,
+        "importPath": "cg",
+        "description": "cg",
+        "peekOfCode": "n = int(input())\nfor i in range(n):\n    x, y = [int(j) for j in input().split(\" \")]\n# Initialize area\narea = 0.0\n# Calculate value of shoelace formula\nj = n - 1\nfor i in range(0,n):\n    area += (x[j] + x[i]) * (y[j] - y[i])\n    j = i",
+        "detail": "cg",
+        "documentation": {}
+    },
+    {
+        "label": "area",
+        "kind": 5,
+        "importPath": "cg",
+        "description": "cg",
+        "peekOfCode": "area = 0.0\n# Calculate value of shoelace formula\nj = n - 1\nfor i in range(0,n):\n    area += (x[j] + x[i]) * (y[j] - y[i])\n    j = i\nprint(int(area/2))",
+        "detail": "cg",
+        "documentation": {}
+    },
+    {
+        "label": "j",
+        "kind": 5,
+        "importPath": "cg",
+        "description": "cg",
+        "peekOfCode": "j = n - 1\nfor i in range(0,n):\n    area += (x[j] + x[i]) * (y[j] - y[i])\n    j = i\nprint(int(area/2))",
+        "detail": "cg",
+        "documentation": {}
+    },
+    {
+        "label": "print_nums",
+        "kind": 2,
+        "importPath": "rev3",
+        "description": "rev3",
+        "peekOfCode": "def print_nums(a, b, c, d):\n    output = \"\"\n    for j in range(c):\n        for i in range(a, a+b*d, b):\n            output += str(i) + \" \"\n            a = i + 2\n        output += \"\\n\"\n    return output\nprint(print_nums(a, b, c, d))",
+        "detail": "rev3",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "rev3",
+        "description": "rev3",
+        "peekOfCode": "a = int(input())\nb = int(input())\nc = int(input())\nd = int(input())\ni = 0\ndef print_nums(a, b, c, d):\n    output = \"\"\n    for j in range(c):\n        for i in range(a, a+b*d, b):\n            output += str(i) + \" \"",
+        "detail": "rev3",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "rev3",
+        "description": "rev3",
+        "peekOfCode": "b = int(input())\nc = int(input())\nd = int(input())\ni = 0\ndef print_nums(a, b, c, d):\n    output = \"\"\n    for j in range(c):\n        for i in range(a, a+b*d, b):\n            output += str(i) + \" \"\n            a = i + 2",
+        "detail": "rev3",
+        "documentation": {}
+    },
+    {
+        "label": "c",
+        "kind": 5,
+        "importPath": "rev3",
+        "description": "rev3",
+        "peekOfCode": "c = int(input())\nd = int(input())\ni = 0\ndef print_nums(a, b, c, d):\n    output = \"\"\n    for j in range(c):\n        for i in range(a, a+b*d, b):\n            output += str(i) + \" \"\n            a = i + 2\n        output += \"\\n\"",
+        "detail": "rev3",
+        "documentation": {}
+    },
+    {
+        "label": "d",
+        "kind": 5,
+        "importPath": "rev3",
+        "description": "rev3",
+        "peekOfCode": "d = int(input())\ni = 0\ndef print_nums(a, b, c, d):\n    output = \"\"\n    for j in range(c):\n        for i in range(a, a+b*d, b):\n            output += str(i) + \" \"\n            a = i + 2\n        output += \"\\n\"\n    return output",
+        "detail": "rev3",
+        "documentation": {}
+    },
+    {
+        "label": "i",
+        "kind": 5,
+        "importPath": "rev3",
+        "description": "rev3",
+        "peekOfCode": "i = 0\ndef print_nums(a, b, c, d):\n    output = \"\"\n    for j in range(c):\n        for i in range(a, a+b*d, b):\n            output += str(i) + \" \"\n            a = i + 2\n        output += \"\\n\"\n    return output\nprint(print_nums(a, b, c, d))",
+        "detail": "rev3",
+        "documentation": {}
+    },
+    {
+        "label": "print_grid",
+        "kind": 2,
+        "importPath": "reverse1",
+        "description": "reverse1",
+        "peekOfCode": "def print_grid(n):\n    i = 0\n    j = 0\n    while i < n:\n        print(\"-\" * (2 * n + 3))\n        while(j < n):\n            print(\"|\" + \".\" * (n) + \"|\", end=\"\")\n            print(\".\" * (n) + \"|\")\n            j += 1\n        j = 0",
+        "detail": "reverse1",
+        "documentation": {}
+    },
+    {
+        "label": "n",
+        "kind": 5,
+        "importPath": "reverse1",
+        "description": "reverse1",
+        "peekOfCode": "n = int(input())\ndef print_grid(n):\n    i = 0\n    j = 0\n    while i < n:\n        print(\"-\" * (2 * n + 3))\n        while(j < n):\n            print(\"|\" + \".\" * (n) + \"|\", end=\"\")\n            print(\".\" * (n) + \"|\")\n            j += 1",
+        "detail": "reverse1",
+        "documentation": {}
+    },
+    {
+        "label": "thirdletter",
+        "kind": 2,
+        "importPath": "reverse2",
+        "description": "reverse2",
+        "peekOfCode": "def thirdletter(s):\n    words = s.split(\" \")\n    output = \"\"\n    letters=\"\"\n    for word in words:\n        #take the every third letter in s\n        for i in range(2,len(word),3):\n            output = output + word[i]\n    if(word != words[-1]): output = output + \" \"\n    return(output)",
+        "detail": "reverse2",
+        "documentation": {}
+    },
+    {
+        "label": "s",
+        "kind": 5,
+        "importPath": "reverse2",
+        "description": "reverse2",
+        "peekOfCode": "s = input()\n#count words in s\n#generate random string\ndef thirdletter(s):\n    words = s.split(\" \")\n    output = \"\"\n    letters=\"\"\n    for word in words:\n        #take the every third letter in s\n        for i in range(2,len(word),3):",
+        "detail": "reverse2",
+        "documentation": {}
+    }
+]
