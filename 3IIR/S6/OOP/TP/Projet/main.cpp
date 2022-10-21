@@ -96,9 +96,7 @@ class Vehicule
         void afficher(){
             cout << "Vehicule : " << numero << " vitesse:  " << vitesse << " carb: " << carburant << " demarre: " << estDemarre << " p: " << pilote.getCode() << " " << pilote.getNom() << endl;
         };
-        void addCarburant(int c){
-            carburant += c;
-        };
+        void addCarburant(int c);
         void faireLePlein();
         int getNB_roues();
 };

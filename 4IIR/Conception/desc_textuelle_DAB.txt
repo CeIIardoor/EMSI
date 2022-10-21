@@ -1,0 +1,29 @@
+1 - Identification :
+	Titre : Traiter le paiement
+	Résumé : après que le caissier enregistre les articles, le client procède au mode de paiement de son choix
+	Acteurs :
+		Principale : caissier
+		Secondaire : client
+	Version : 0.1
+
+2 - Description des scénarios :
+	Préconditions : 
+		- La caisse est connectée au stock
+		- Le client est solvable
+	Scénario nominal : 
+		- Le client passe a la caisse avec les articles
+		- Le caissier scanne le code barre des articles
+		- Le caissier peut spécifier la qte si > 1
+		- La caisse affiche leurs prix sur l'ecran
+		- Le caissier signale la fin de la vente
+		- Le caissier affiche le total et choisis le mode de paiement
+			- Le caissier rend la monnaie en cas de paiement par liquide
+			- Le caissier fait une demande au centre d'autorisations bancaires et vérifie la solvabilité
+			- Le caissier accepte le chèque et vérifie les données du chèque
+		- Le caissier imprime un ticket du total et un reçu de paiement si paiement par carte
+		- Le caissier conclue la vente et passe au client suivant
+	Post-conditions :
+		- Le caissier envoie l'identificateur et la quatité au stock
+3 - 
+	
+	
