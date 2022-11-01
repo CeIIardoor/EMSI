@@ -19,25 +19,11 @@ public class Factorielle {
         }
     }
 
-    public static int factV2(int a) {
-        BigInteger res = BigInteger.valueOf(1);
+    public static BigInteger factV2(int a) {
+        BigInteger res = BigInteger.ONE;
         for (int i = 1; i <= a; i++) {
             res = res.multiply(BigInteger.valueOf(i));
         }
-        return res.intValue();
+        return res;
     }
-    // TODO
-    // public static int factV2_rec(BigInteger a) {
-    //     if (a.equals(BigInteger.valueOf(0))) {
-    //         return 1;
-    //     } else {
-    //         return a.multiply(
-    //             BigInteger.valueOf(
-    //                 factV2_rec(
-    //                     a.subtract(
-    //                         BigInteger.valueOf(1)
-    //             ))))
-    //         .intValue();
-    //     }
-    // }
 }
