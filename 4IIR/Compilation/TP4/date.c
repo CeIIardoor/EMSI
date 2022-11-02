@@ -26,35 +26,35 @@ int main()
                         etat = 13;
                     } 
                 } else {
-                    printf("invalid date");exit(1);
+                    printf("invalid date ");printf("%d",etat);exit(1);
                 }
                 break;
             case 11:
                 if(sdate[i] >= '0' && sdate[i] <= '9' ){
                     etat = 2;
                 } else {
-                    printf("invalid date");exit(1);
+                    printf("invalid date ");printf("%d",etat);exit(1);
                 }
                 break;
             case 12:
                 if(sdate[i] == '0'){
                     etat = 2;
                 } else {
-                    printf("invalid date");exit(1);
+                    printf("invalid date ");printf("%d",etat);exit(1);
                 }
                 break;
             case 13:
                 if(sdate[i] >= '1' && sdate[i] <= '9' ){
                     etat = 2;
                 } else {
-                    printf("invalid date");exit(1);
+                    printf("invalid date ");printf("%d",etat);exit(1);
                 }
                 break;
             case 2:
                 if(sdate[i] == '/'){
                     etat = 3;
                 } else {
-                    printf("invalid date");exit(1);
+                    printf("invalid date ");printf("%d",etat);exit(1);
                 }
                 break;
             case 3:
@@ -66,26 +66,32 @@ int main()
                         etat = 42;
                     } 
                 } else {
-                    printf("invalid date");exit(1);
+                    printf("invalid date ");printf("%d",etat);exit(1);
                 }
                 break;
             case 41:
                 if(sdate[i] >= '1' && sdate[i] <= '9' ){
                     etat = 5;
                 } else {
-                    printf("invalid date");exit(1);
+                    printf("invalid date ");printf("%d",etat);exit(1);
                 }
                 break;
             case 42:
                 if(sdate[i] == '0' || sdate[i] == '1' || sdate[i] == '2'){
                     etat = 5;
                 } else {
-                    printf("invalid date");exit(1);
+                    printf("invalid date ");printf("%d",etat);exit(1);
                 }
                 break;
+            case 5:
+                if(sdate[i] == '\0'){
+                    printf("valid date"); return 0;
+                } else {
+                    printf("invalid date ");printf("%d",etat);exit(1);
+                }
+                break;
+        }
         i++;
     }
     return 0;
 }
-
-
