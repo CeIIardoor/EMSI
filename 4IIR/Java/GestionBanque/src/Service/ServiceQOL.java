@@ -26,5 +26,6 @@ public class ServiceQOL {
         System.out.println("Email : " + ServiceQOL.banque.getEmailAgence());
         System.out.println("Nombre de clients : " + ServiceQOL.banque.getClients().size());
         System.out.println("Nombre de comptes : " + ServiceQOL.banque.getComptes().size());
+        //test
     }
 }
