@@ -51,10 +51,6 @@ public class Compte {
         return journalisation;
     }
 
-    public void setJournalisation(ArrayList<String> journalisation) {
-        this.journalisation = journalisation;
-    }
-
     public Client getProprietaire() {
         return proprietaire;
     }
@@ -65,6 +61,15 @@ public class Compte {
 
     public Compte(){
         idCompte = cmpCompte++;
+        System.out.println("Propriétaire existant ? : ([O]/N)");
+        String choix = new Scanner(System.in).nextLine();
+        if(choix.equalsIgnoreCase("O")){
+            System.out.println("Entrer l'id du propriétaire : ");
+            int idProprietaire = new Scanner(System.in).nextInt();
+            proprietaire = ServiceCRUD.getClientById(idProprietaire);
+        }else{
+            proprietaire = new Client();
+        }
         System.out.println("Entrer le solde initial du compte : ");
         do{
             solde = new Scanner(System.in).nextDouble();
@@ -78,15 +83,7 @@ public class Compte {
         if(solde != 0){
             journalisation.add("Dépôt de " + solde + "dh");
         }
-        System.out.println("Propriétaire existant ? : ([O]/N)");
-        String choix = new Scanner(System.in).nextLine();
-        if(choix.equalsIgnoreCase("O")){
-            System.out.println("Entrer l'id du propriétaire : ");
-            int idProprietaire = new Scanner(System.in).nextInt();
-            proprietaire = ServiceCRUD.getClientById(idProprietaire);
-        }else{
-            proprietaire = new Client();
-        }
+
     }
     public Compte(Client proprietaire){
         //Client deja existant

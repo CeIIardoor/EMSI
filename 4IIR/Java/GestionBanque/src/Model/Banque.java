@@ -131,4 +131,13 @@ public class Banque{
             System.out.println("Impossible d'ajouter le client " + client.getIdClient() + " : nombre max de clients atteint");
         }
     }
+
+    public Compte getCompteById(int idCompte){
+        for (Compte compte : this.comptes){
+            if (compte.getIdCompte() == idCompte){
+                System.out.println(compte);
+            }
+        }
+        return null;
+    }
 }

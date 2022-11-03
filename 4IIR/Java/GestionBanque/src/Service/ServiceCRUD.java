@@ -44,6 +44,100 @@ public class ServiceCRUD {
     public Client creerEtAjouterNouveauClient(){
         Client client = new Client();
         banque.ajouterClient(client);
+        System.out.println("Client " + client.getIdClient() + "créé et ajouté à" + banque.getNomAgence());
         return client;
     }
+
+    public void lierCompteAuClient(int idClient, int idCompte){
+        Client client = getClientById(idClient);
+        Compte compte = getCompteById(idCompte);
+        if (client != null && compte != null){
+            if (client.getComptes().size() < client.getMaxComptes()){
+                client.ajouterCompte(compte);
+                System.out.println("Compte " + compte.getIdCompte() + " lié au client " + client.getIdClient());
+            } else {
+                System.out.println("Impossible de lier le compte " + compte.getIdCompte() + " au client " + client.getIdClient() + " : nombre max de comptes atteint");
+            }
+        } else {
+            System.out.println("Compte ou client inexistant");
+        }
+    }
+
+    private Compte getCompteById(int idCompte) {
+        for (Compte compte : banque.getComptes()) {
+            if (compte.getIdCompte() == idCompte) {
+                return compte;
+            }
+        }
+        return null;
+    }
+
+    public Compte chercherUnCompte(int idCompte){
+        Compte compte = getCompteById(idCompte);
+        if (compte != null){
+            System.out.println("Compte " + compte.getIdCompte() + " trouvé");
+            return compte;
+        } else {
+            System.out.println("Compte inexistant");
+            return null;
+        }
+    }
+
+    public Client chercherUnClient(int idClient){
+        Client client = getClientById(idClient);
+        if (client != null){
+            System.out.println("Client " + client.getIdClient() + " trouvé");
+            return client;
+        } else {
+            System.out.println("Client inexistant");
+            return null;
+        }
+    }
+
+    public void consulterDetailCompte(int idCompte){
+        Compte compte = getCompteById(idCompte);
+        if (compte != null){
+            System.out.println("Détail du compte " + compte.getIdCompte() + " :");
+            System.out.println(compte.toString());
+        } else {
+            System.out.println("Compte inexistant");
+        }
+    }
+
+    public void consulterDetailClient(int idClient){
+        Client client = getClientById(idClient);
+        if (client != null){
+            System.out.println("Détail du client " + client.toString());
+        } else {
+            System.out.println("Client inexistant");
+        }
+    }
+
+    public boolean modifierCompte(int idCompte, Compte compte){
+        Compte compteAModifier = getCompteById(idCompte);
+        if (compteAModifier != null){
+            compteAModifier.setSolde(compte.getSolde());
+            System.out.println("Compte " + compteAModifier.getIdCompte() + " modifié");
+            return true;
+        } else {
+            System.out.println("Compte inexistant");
+            return false;
+        }
+    }
+
+    public boolean modifierClient(int idClient, Client client){
+        Client clientAModifier = getClientById(idClient);
+        if (clientAModifier != null){
+            clientAModifier.setNom(client.getNom());
+            clientAModifier.setPrenom(client.getPrenom());
+            clientAModifier.setEmail(client.getEmail());
+
+            System.out.println("Client " + clientAModifier.getIdClient() + " modifié");
+            return true;
+        } else {
+            System.out.println("Client inexistant");
+            return false;
+        }
+    }
+
 }

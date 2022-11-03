@@ -22,6 +22,7 @@ public class Client {
     private String email;
     private ArrayList<String> journalisation;
     private ArrayList<Compte> comptes;
+    private int maxComptes = 2;
 
     public int getIdClient() {
         return idClient;
@@ -128,5 +129,9 @@ public class Client {
         this.email = email;
         this.journalisation = new ArrayList<String>();
         this.comptes = new ArrayList<Compte>(2);
+    }
+
+    public int getMaxComptes() {
+        return maxComptes;
     }
 }
