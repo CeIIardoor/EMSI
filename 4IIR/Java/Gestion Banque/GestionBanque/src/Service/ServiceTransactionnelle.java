@@ -1,7 +1,5 @@
 package Service;
 
-import Model.CompteBancaire;
-
 public class ServiceTransactionnelle {
     /* Fonctions du Service :
             - Service transactionnelle :: (chaque service finit par une journalisation)

@@ -1,10 +1,9 @@
 package Model;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Objects;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Client {
     /*
@@ -22,7 +21,7 @@ public class Client {
     private String prenom;
     private String email;
     private ArrayList<String> journalisation;
-    private ArrayList<CompteBancaire> comptes;
+    private ArrayList<Compte> comptes;
 
     public int getIdClient() {
         return idClient;
@@ -64,19 +63,19 @@ public class Client {
         this.journalisation = journalisation;
     }
 
-    public ArrayList<CompteBancaire> getComptes() {
+    public ArrayList<Compte> getComptes() {
         return comptes;
     }
 
-    public void setComptes(ArrayList<CompteBancaire> comptes) {
+    public void setComptes(ArrayList<Compte> comptes) {
         this.comptes = comptes;
     }
 
-    public void ajouterCompte(CompteBancaire compte) {
+    public void ajouterCompte(Compte compte) {
         this.comptes.add(compte);
     }
 
-    public void retirerCompte(CompteBancaire compte) {
+    public void retirerCompte(Compte compte) {
         this.comptes.remove(compte);
     }
 
@@ -107,19 +106,20 @@ public class Client {
     }
 
     public Client(){
+        Scanner sc = new Scanner(System.in);
         System.out.println("Entrer le nom du client : ");
-        this.nom = new Scanner(System.in).nextLine();
+        this.nom = sc.nextLine();
         System.out.println("Entrer le prénom du client : ");
-        this.prenom = new Scanner(System.in).nextLine();
+        this.prenom = sc.nextLine();
         do {
             System.out.println("Entrer l'email du client : ");
-            this.email = new Scanner(System.in).nextLine();
-        } while (!this.email.matches("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$"));
+            this.email = sc.nextLine();
+        } while (!this.email.matches("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,6}$"));
         this.idClient = cmpClients++;
         this.journalisation = new ArrayList<String>();
-        this.comptes = new ArrayList<CompteBancaire>();
-        this.journalisation.add("Création du client le " + new java.util.Date().toString());
-
+        this.comptes = new ArrayList<Compte>();
+        this.journalisation.add("Création du client le " + new Date().toString());
+        sc.close();
     }
     public Client(String nom, String prenom, String email) {
         this.idClient = ++cmpClients;
@@ -127,6 +127,6 @@ public class Client {
         this.prenom = prenom;
         this.email = email;
         this.journalisation = new ArrayList<String>();
-        this.comptes = new ArrayList<CompteBancaire>();
+        this.comptes = new ArrayList<Compte>();
     }
 }

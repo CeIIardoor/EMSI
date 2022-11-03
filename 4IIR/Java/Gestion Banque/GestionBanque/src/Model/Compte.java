@@ -1,9 +1,12 @@
 package Model;
 
+import Service.ServiceCRUD;
+
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 
-public class CompteBancaire {
+public class Compte {
     /*
     Écrire une classe Compte définissant un compte bancaire :
     Attributs : idCompte, solde, date de création, tableau de
@@ -17,8 +20,8 @@ public class CompteBancaire {
     Méthodes : public String toString(),
     public boolean equals(Object autreCompte)
      */
-
-    private static int idCompte;
+    public static int cmpCompte = 0;
+    private int idCompte;
     private double solde;
     private String dateCreation;
     private ArrayList<String> journalisation;
@@ -60,21 +63,49 @@ public class CompteBancaire {
         this.proprietaire = proprietaire;
     }
 
-
-    public CompteBancaire(double solde, Client proprietaire) {
-        idCompte = idCompte++;
-        this.solde = solde;
-        this.dateCreation = new Date().toString();
-        this.journalisation = new ArrayList<String>();
-        this.proprietaire = proprietaire;
-        this.journalisation.add("Création du compte le " + dateCreation);
-        if (solde > 0) {
-            this.journalisation.add("Dépôt de " + solde + "dh");
-        } else if (solde < 0) {
-            throw new IllegalArgumentException("Solde initial doit être positif");
+    public Compte(){
+        idCompte = cmpCompte++;
+        System.out.println("Entrer le solde initial du compte : ");
+        do{
+            solde = new Scanner(System.in).nextDouble();
+            if(solde < 0){
+                System.out.println("Le solde doit être positif, veuillez réessayer : ");
+            }
+        }while(solde < 0);
+        dateCreation = new Date().toString();
+        journalisation = new ArrayList<>();
+        journalisation.add("Création du compte le " + dateCreation);
+        if(solde != 0){
+            journalisation.add("Dépôt de " + solde + "dh");
+        }
+        System.out.println("Propriétaire existant ? : ([O]/N)");
+        String choix = new Scanner(System.in).nextLine();
+        if(choix.equalsIgnoreCase("O")){
+            System.out.println("Entrer l'id du propriétaire : ");
+            int idProprietaire = new Scanner(System.in).nextInt();
+            proprietaire = ServiceCRUD.getClientById(idProprietaire);
+        }else{
+            proprietaire = new Client();
         }
     }
-
+    public Compte(Client proprietaire){
+        //Client deja existant
+        idCompte = cmpCompte++;
+        do {
+            System.out.println("Entrer le solde initial du compte : ");
+            solde = new Scanner(System.in).nextDouble();
+            if (solde < 0) {
+                System.out.println("Le solde doit être positif, veuillez réessayer : ");
+            }
+        } while (solde < 0);
+        dateCreation = new Date().toString();
+        journalisation = new ArrayList<>();
+        journalisation.add("Création du compte le " + dateCreation);
+        if(solde != 0){
+            journalisation.add("Dépôt de " + solde + "dh");
+        }
+        this.proprietaire = proprietaire;
+    }
     @Override
     public String toString() {
         return "Compte[" +
@@ -91,7 +122,7 @@ public class CompteBancaire {
         if (this == autreCompte) return true;
         if (autreCompte == null || getClass() != autreCompte.getClass()) return false;
 
-        CompteBancaire c = (CompteBancaire) autreCompte;
+        Compte c = (Compte) autreCompte;
         return  dateCreation.equals(c.dateCreation)
                 && journalisation.equals(c.journalisation)
                 && proprietaire.equals(c.proprietaire);

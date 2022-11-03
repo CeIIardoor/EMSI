@@ -5,13 +5,13 @@ import java.util.Objects;
 import java.util.Scanner;
 public class Banque{
     /*
-    Écrire une classe Banque lié par relation d’agrégation au deux classes Compte et Client :
+    Écrire une classe Banque liée par relation d’agrégation au deux classes Compte et Client :
     Attributs : idBanque, nomAgence, email, maxComptes,
     maxClients et un tableau de comptes, tableau de Clients.
     Accès : getters, setters
     (nombre max de Clients et Comptes doit être fixé dès la
     création de l’agence bancaire)
-    (id de la banque doit être auto-généré)
+    (id de la banque doit être autogénéré)
     Méthodes : public String toString(),
     public boolean equals(Object autreBanque)
      */
@@ -19,9 +19,9 @@ public class Banque{
     private int idBanque;
     private String nomAgence;
     private String email;
-    private int maxComptes = 10;
-    private int maxClients = 10;
-    private ArrayList<CompteBancaire> comptes;
+    private int maxComptes;
+    private int maxClients;
+    private ArrayList<Compte> comptes;
     private ArrayList<Client> clients;
 
     public int getIdBanque() {
@@ -58,11 +58,11 @@ public class Banque{
         this.maxClients = maxClients;
     }
 
-    public ArrayList<CompteBancaire> getComptes() {
+    public ArrayList<Compte> getComptes() {
         return comptes;
     }
 
-    public void setComptes(ArrayList<CompteBancaire> comptes) {
+    public void setComptes(ArrayList<Compte> comptes) {
         this.comptes = comptes;
     }
 
@@ -82,7 +82,7 @@ public class Banque{
         do {
             System.out.println("Entrer l'email de l'agence");
             this.email = sc.nextLine();
-        } while (!this.email.matches("^[A-Za-z0-9+_.-]+@(.+)$"));
+        } while (!this.email.matches("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,6}$"));
         do {
             System.out.println("Entrer le nombre max de comptes (>=10) :");
             this.maxComptes = sc.nextInt();
@@ -91,7 +91,7 @@ public class Banque{
             System.out.println("Entrer le nombre max de clients (>=10) :");
             this.maxClients = sc.nextInt();
         } while (this.maxClients < 10);
-        this.comptes = new ArrayList<CompteBancaire>(maxComptes);
+        this.comptes = new ArrayList<Compte>(maxComptes);
         this.clients = new ArrayList<Client>(maxClients);
     }
     public Banque(String nomAgence, String email, int maxComptes, int maxClients) {
@@ -100,7 +100,7 @@ public class Banque{
         this.email = email;
         this.maxComptes = maxComptes;
         this.maxClients = maxClients;
-        this.comptes = new ArrayList<CompteBancaire>(maxComptes);
+        this.comptes = new ArrayList<Compte>(maxComptes);
         this.clients = new ArrayList<Client>(maxClients);
     }
 
@@ -121,5 +121,13 @@ public class Banque{
         return idBanque == other.idBanque && maxClients == other.maxClients && maxComptes == other.maxComptes
                 && Objects.equals(clients, other.clients) && Objects.equals(comptes, other.comptes)
                 && Objects.equals(email, other.email) && Objects.equals(nomAgence, other.nomAgence);
+    }
+    public void ajouterCompte(Compte compte){
+        if (this.comptes.size() < this.maxComptes){
+            this.comptes.add(compte);
+            System.out.println("Compte" + compte.getIdCompte() + " ajouté avec succès");
+        } else {
+            System.out.println("Impossible d'ajouter le compte " + compte.getIdCompte() + " : nombre max de comptes atteint");
+        }
     }
 }
