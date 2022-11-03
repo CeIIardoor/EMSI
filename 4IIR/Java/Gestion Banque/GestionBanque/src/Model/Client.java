@@ -117,7 +117,7 @@ public class Client {
         } while (!this.email.matches("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,6}$"));
         this.idClient = cmpClients++;
         this.journalisation = new ArrayList<String>();
-        this.comptes = new ArrayList<Compte>();
+        this.comptes = new ArrayList<Compte>(2);
         this.journalisation.add("Création du client le " + new Date().toString());
         sc.close();
     }
@@ -127,6 +127,6 @@ public class Client {
         this.prenom = prenom;
         this.email = email;
         this.journalisation = new ArrayList<String>();
-        this.comptes = new ArrayList<Compte>();
+        this.comptes = new ArrayList<Compte>(2);
     }
 }

@@ -43,8 +43,7 @@ public class ServiceCRUD {
 
     public Client creerEtAjouterNouveauClient(){
         Client client = new Client();
-        Compte compte = this.creerEtAjouterCompte();
-
+        banque.ajouterClient(client);
         return client;
     }
 }

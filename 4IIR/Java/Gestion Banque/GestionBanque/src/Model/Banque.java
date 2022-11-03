@@ -62,16 +62,8 @@ public class Banque{
         return comptes;
     }
 
-    public void setComptes(ArrayList<Compte> comptes) {
-        this.comptes = comptes;
-    }
-
     public ArrayList<Client> getClients() {
         return clients;
-    }
-
-    public void setClients(ArrayList<Client> clients) {
-        this.clients = clients;
     }
 
     public Banque(){
@@ -128,6 +120,15 @@ public class Banque{
             System.out.println("Compte" + compte.getIdCompte() + " ajouté avec succès");
         } else {
             System.out.println("Impossible d'ajouter le compte " + compte.getIdCompte() + " : nombre max de comptes atteint");
+        }
+    }
+
+    public void ajouterClient(Client client){
+        if (this.clients.size() < this.maxClients){
+            this.clients.add(client);
+            System.out.println("Client" + client.getIdClient() + " ajouté avec succès");
+        } else {
+            System.out.println("Impossible d'ajouter le client " + client.getIdClient() + " : nombre max de clients atteint");
         }
     }
 }
