@@ -11,7 +11,7 @@ public class ServiceTransactionnelle {
     public boolean virement(double montant, Compte src, Compte des)
     public boolean creerCompte(Compte c)
      */
-    private Banque banque;
+    private static Banque banque;
 
     public ServiceTransactionnelle(Banque _banque){
         banque = _banque;

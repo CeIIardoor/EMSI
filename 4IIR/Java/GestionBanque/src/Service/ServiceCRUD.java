@@ -5,6 +5,8 @@ import Model.Banque;
 import Model.Client;
 import Model.Compte;
 
+import java.util.Scanner;
+
 public class ServiceCRUD {
     /* - Service CRUD :: (création, consultation, modification et suppression)
     public Compte créerEtAjouterCompte(Scanner clavier)
@@ -14,8 +16,8 @@ public class ServiceCRUD {
     public Compte chercherUnClient(Scanner clavier)
     public void consulterDétailCompte(Scanner clavier)
     public void consulterDétailClient(Scanner clavier)
-    public boolean modifierCompte(Scanner clavier)
-    public boolean modifierClient(Scanner clavier)
+    public Compte modifierCompte(Scanner clavier)
+    public Client modifierClient(Scanner clavier)
     public boolean supprimerCompte(Scanner clavier)
     public boolean supprimerClient(Scanner clavier)
      */
@@ -125,14 +127,43 @@ public class ServiceCRUD {
         }
     }
 
-    public boolean modifierClient(int idClient, Client client){
+    public Client modifierClient(int idClient, Client client){
         Client clientAModifier = getClientById(idClient);
         if (clientAModifier != null){
-            clientAModifier.setNom(client.getNom());
-            clientAModifier.setPrenom(client.getPrenom());
-            clientAModifier.setEmail(client.getEmail());
-
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Saisir le nouveau nom du client " + clientAModifier.getIdClient() + " :");
+            clientAModifier.setNom(sc.nextLine());
+            System.out.println("Saisir le nouveau prénom du client " + clientAModifier.getIdClient() + " :");
+            clientAModifier.setPrenom(sc.nextLine());
+            do {
+                System.out.println("Saisir le nouveau mail du client " + clientAModifier.getIdClient() + " :");
+                clientAModifier.setEmail(sc.nextLine());
+            } while (!clientAModifier.getEmail().matches("^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\\.[a-z]{2,4}$"));
             System.out.println("Client " + clientAModifier.getIdClient() + " modifié");
+            return clientAModifier;
+        } else {
+            System.out.println("Client inexistant");
+            return null;
+        }
+    }
+
+    public boolean supprimerCompte(int idCompte){
+        Compte compte = getCompteById(idCompte);
+        if (compte != null){
+            banque.supprimerCompte(compte);
+            System.out.println("Compte " + compte.getIdCompte() + " supprimé");
+            return true;
+        } else {
+            System.out.println("Compte inexistant");
+            return false;
+        }
+    }
+
+    public boolean supprimerClient(int idClient){
+        Client client = getClientById(idClient);
+        if (client != null){
+            banque.supprimerClient(client);
+            System.out.println("Client " + client.getIdClient() + " supprimé");
             return true;
         } else {
             System.out.println("Client inexistant");

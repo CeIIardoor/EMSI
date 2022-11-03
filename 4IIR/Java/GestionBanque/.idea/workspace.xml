@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef869a2e-b100-43cb-8dfe-fcf2c7a1621a" name="Changes" comment="l3cha t7reg">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Banque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Banque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Compte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Compte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ServiceBanque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ServiceBanque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ServiceCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ServiceCRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ServiceTransactionnelle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ServiceTransactionnelle.java" afterDir="false" />
-    </list>
+    <list default="true" id="ef869a2e-b100-43cb-8dfe-fcf2c7a1621a" name="Changes" comment="a mimir" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,9 +39,10 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TODO_SCOPE": "All Places",
     "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "last_opened_file_path": "C:/Users/lenovo/EMSI/4IIR/Java/GestionBanque",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+    "settings.editor.selected.configurable": "CodeWithMe"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -71,7 +64,7 @@
       <workItem from="1667390673142" duration="4191000" />
       <workItem from="1667480427502" duration="11511000" />
       <workItem from="1667502962279" duration="281000" />
-      <workItem from="1667503316837" duration="6175000" />
+      <workItem from="1667503316837" duration="10125000" />
     </task>
     <task id="LOCAL-00001" summary="progress projet java (Dep Inj)">
       <created>1667492908381</created>
@@ -108,7 +101,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667503385948</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="progress">
+      <created>1667509924442</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667509924442</updated>
+    </task>
+    <task id="LOCAL-00007" summary="a mimir">
+      <created>1667513640723</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667513640723</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +139,9 @@
     </ignored-roots>
     <MESSAGE value="progress projet java (Dep Inj)" />
     <MESSAGE value="l3cha t7reg" />
-    <option name="LAST_COMMIT_MESSAGE" value="l3cha t7reg" />
+    <MESSAGE value="progress" />
+    <MESSAGE value="a mimir" />
+    <option name="LAST_COMMIT_MESSAGE" value="a mimir" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

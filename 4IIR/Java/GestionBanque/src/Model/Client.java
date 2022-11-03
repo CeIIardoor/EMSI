@@ -115,7 +115,7 @@ public class Client {
         do {
             System.out.println("Entrer l'email du client : ");
             this.email = sc.nextLine();
-        } while (!this.email.matches("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,6}$"));
+        } while (!this.email.matches("^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\\.[a-z]{2,4}$"));
         this.idClient = cmpClients++;
         this.journalisation = new ArrayList<String>();
         this.comptes = new ArrayList<Compte>(2);

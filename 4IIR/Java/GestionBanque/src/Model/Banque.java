@@ -74,7 +74,7 @@ public class Banque{
         do {
             System.out.println("Entrer l'email de l'agence");
             this.email = sc.nextLine();
-        } while (!this.email.matches("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,6}$"));
+        } while (!this.email.matches("^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\\.[a-z]{2,4}$"));
         do {
             System.out.println("Entrer le nombre max de comptes (>=10) :");
             this.maxComptes = sc.nextInt();
@@ -139,5 +139,23 @@ public class Banque{
             }
         }
         return null;
+    }
+
+    public void supprimerCompte(Compte compte) {
+        if (this.comptes.contains(compte)) {
+            this.comptes.remove(compte);
+            System.out.println("Compte " + compte.getIdCompte() + " supprimé avec succès");
+        } else {
+            System.out.println("Impossible de supprimer le compte " + compte.getIdCompte());
+        }
+    }
+
+    public void supprimerClient(Client client) {
+        if (this.clients.contains(client)) {
+            this.clients.remove(client);
+            System.out.println("Client " + client.getIdClient() + " supprimé avec succès");
+        } else {
+            System.out.println("Impossible de supprimer le client " + client.getIdClient());
+        }
     }
 }

@@ -3,10 +3,10 @@ package Service;
 import Model.Banque;
 
 public class ServiceBanque{
-    private final Banque banque;
+    private static Banque banque;
 
     public ServiceBanque(Banque _banque){
-        this.banque = _banque;
+        banque = _banque;
     }
 
 }

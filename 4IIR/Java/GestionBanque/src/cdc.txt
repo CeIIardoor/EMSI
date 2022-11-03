@@ -52,7 +52,7 @@ public boolean modifierCompte(Scanner clavier)
 public boolean modifierClient(Scanner clavier)
 public boolean supprimerCompte(Scanner clavier)
 public boolean supprimerClient(Scanner clavier)
-- Service ++ ::
+- ServiceQOL ::
 public void consulterInformationsBanque(Scanner clavier)
 public void listerClientsDeLaBanque(Scanner clavier)
 è Ordonné par leur date d’ajout
@@ -64,8 +64,8 @@ public Client[] trierClientsParSolde (Scanner clavier)
 public Client[] trierClientsParNom (Scanner clavier)
 - Service Utilitaire ::
 public void afficherMenuServiceBanque()
-public Object[] trierAsc(Object[] objets, Object orderByElement)
-public Object[] trierDec(Object[] objets, Object orderByElement)
+public Object[] trierAsc(Object[] objets, Object orderByElement) stad ??????
+public Object[] trierDec(Object[] objets, Object orderByElement) polymorphism ze3ma ?????????
 
 Test de l’application :
 Écrire une classe Test-Service-Banque, Créant une banque et la lier au service banque
