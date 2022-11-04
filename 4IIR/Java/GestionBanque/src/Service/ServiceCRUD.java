@@ -27,7 +27,7 @@ public class ServiceCRUD {
         banque = _banque;
     }
 
-    public static Client getClientById(int id){
+    public Client getClientById(int id){
         for (Client client : banque.getClients()) {
             if (client.getIdClient() == id) {
                 return client;

@@ -2,14 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef869a2e-b100-43cb-8dfe-fcf2c7a1621a" name="Changes" comment="nostalgia">
+      <change afterPath="$PROJECT_DIR$/src/Test/TestCRUD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test/TestQOL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test/TestTransactionnel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test/TestUtilitaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionBanque/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Model/Banque.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionBanque/Model/Banque.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Model/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionBanque/Model/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Model/Compte.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionBanque/Model/Compte.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Service/ServiceBanque.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionBanque/Service/ServiceBanque.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Service/ServiceCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionBanque/Service/ServiceCRUD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Service/ServiceTransactionnelle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionBanque/Service/ServiceTransactionnelle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/cdc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionBanque/cdc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Service/ServiceTransactionnelle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Banque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Banque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Compte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Compte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ServiceBanque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ServiceBanque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ServiceCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ServiceCRUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ServiceTransactionnelle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ServiceTransactionnel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +101,7 @@
       <workItem from="1667503316837" duration="10945000" />
       <workItem from="1667543423062" duration="5042000" />
       <workItem from="1667555805497" duration="552000" />
-      <workItem from="1667570737249" duration="2871000" />
+      <workItem from="1667570737249" duration="11547000" />
     </task>
     <task id="LOCAL-00001" summary="progress projet java (Dep Inj)">
       <created>1667492908381</created>
@@ -203,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667573581084</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="nostalgia">
+      <created>1667574043993</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1667574043993</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

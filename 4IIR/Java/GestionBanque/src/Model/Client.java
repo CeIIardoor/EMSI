@@ -23,7 +23,6 @@ public class Client {
     private ArrayList<String> journalisation;
     private ArrayList<Compte> comptes;
     private int maxComptes = 2;
-
     private Date dateAjout;
 
     public int getIdClient() {
@@ -109,21 +108,19 @@ public class Client {
     }
 
     public Client(){
-        Scanner sc = new Scanner(System.in);
         System.out.println("Entrer le nom du client : ");
-        this.nom = sc.nextLine();
+        this.nom = new Scanner(System.in).nextLine();
         System.out.println("Entrer le prénom du client : ");
-        this.prenom = sc.nextLine();
+        this.prenom = new Scanner(System.in).nextLine();
         do {
             System.out.println("Entrer l'email du client : ");
-            this.email = sc.nextLine();
+            this.email = new Scanner(System.in).nextLine();
         } while (!this.email.matches("^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\\.[a-z]{2,4}$"));
         this.idClient = cmpClients++;
         this.journalisation = new ArrayList<String>();
         this.comptes = new ArrayList<Compte>(2);
         this.dateAjout = new Date();
-        this.journalisation.add("Création du client le " + new Date().toString());
-        sc.close();
+        this.journalisation.add("Création du client le " + new Date());
     }
     public Client(String nom, String prenom, String email) {
         this.idClient = ++cmpClients;

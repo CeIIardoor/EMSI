@@ -3,7 +3,7 @@ package Service;
 import Model.Banque;
 import Model.Compte;
 
-public class ServiceTransactionnelle {
+public class ServiceTransactionnel {
     /* Fonctions du Service :
     - Service transactionnelle :: (chaque service finit par une journalisation)
     public boolean verser(double montant, Compte c)
@@ -13,7 +13,7 @@ public class ServiceTransactionnelle {
      */
     private static Banque banque;
 
-    public ServiceTransactionnelle(Banque _banque){
+    public ServiceTransactionnel(Banque _banque){
         banque = _banque;
     }
 

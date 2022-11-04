@@ -24,6 +24,15 @@ public class Banque{
     private ArrayList<Compte> comptes;
     private ArrayList<Client> clients;
 
+    public Client getClientById(int idProprietaire) {
+        for (Client client : clients) {
+            if (client.getIdClient() == idProprietaire) {
+                return client;
+            }
+        }
+        return null;
+    }
+
     public int getIdBanque() {
         return idBanque;
     }

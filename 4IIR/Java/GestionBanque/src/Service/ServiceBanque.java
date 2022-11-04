@@ -10,7 +10,10 @@ public class ServiceBanque{
     }
 
     public static void afficherBanque(){
-        System.out.println(banque);
+        System.out.println("Banque : " + banque.getNomAgence());
+        System.out.println("Email : " + banque.getEmailAgence());
+        System.out.println("Nombre de clients : " + banque.getClients().size());
+        System.out.println("Nombre de comptes : " + banque.getComptes().size());
     }
 
     public static void afficherComptes(){
