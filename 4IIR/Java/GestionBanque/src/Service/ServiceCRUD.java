@@ -115,15 +115,18 @@ public class ServiceCRUD {
         }
     }
 
-    public boolean modifierCompte(int idCompte, Compte compte){
+    public Compte modifierCompte(int idCompte, Compte compte){
         Compte compteAModifier = getCompteById(idCompte);
         if (compteAModifier != null){
-            compteAModifier.setSolde(compte.getSolde());
+            do {
+                System.out.println("Saisir le nouveau solde du compte " + compteAModifier.getIdCompte() + " :");
+                compteAModifier.setSolde(new Scanner(System.in).nextDouble());
+            } while (compteAModifier.getSolde() < 0);
             System.out.println("Compte " + compteAModifier.getIdCompte() + " modifié");
-            return true;
+            return compteAModifier;
         } else {
             System.out.println("Compte inexistant");
-            return false;
+            return null;
         }
     }
 

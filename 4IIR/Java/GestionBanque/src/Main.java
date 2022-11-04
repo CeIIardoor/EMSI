@@ -1,24 +1,35 @@
 import Model.Banque;
 import Model.Client;
-import Model.Compte;
-import Service.ServiceCRUD;
+import Service.ServiceBanque;
 
 public class Main {
     public static void main(String[] args) {
         /*
-        System.out.println("Création client 1");
-        Client client1 = new Client();
-        System.out.println("Creation compte bancaire 1");
-        Compte compte1 = new Compte(1000, client1);
-         */
-        System.out.println("Creation banque 1");
-        Banque banque1 = new Banque("Banque 1", "banque1@gmail.com", 10,100);
-        Banque banque2 = new Banque("Banque 2", "banque2@gmail.com", 10,100);
-        System.out.println(banque1.toString());
-        System.out.println(banque2.toString());
+            * 1. Créer une banque
+            * 2. Créer client1
+            * 3. Créer client2
+            * 4. Créer client3
+            * 5. Créer compte11
+            * 6. Créer compte12
+            * 7. Créer compte2
+            * 8. Créer compte3
+            * 9. lier client11 à compte1
+            * 10. lier client12 à compte1
+            * 11. lier client2 à compte2
+            * 12. lier client3 à compte3
+            * 13. Afficher les comptes de client1
+            * 14. Afficher les clients de compte1
+        */
+        Banque banque = new Banque("Banque de test", "banque@test.com", 100, 1000);
+        Client client1 = new Client("Client1", "Test", "client1@test.com");
+        Client client2 = new Client("Client2", "Test", "client2@test.com");
+        Client client3 = new Client("Client3", "Test", "client3@test.com");
+        ServiceBanque serviceBanque = new ServiceBanque(banque);
+        banque.ajouterClient(client1);
+        banque.ajouterClient(client2);
+        banque.ajouterClient(client3);
 
-        ServiceCRUD serviceCRUD = new ServiceCRUD(banque1);
-        serviceCRUD.creerEtAjouterCompte();
+        ServiceBanque.afficherClients();
 
     }
 }

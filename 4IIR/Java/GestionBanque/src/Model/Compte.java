@@ -62,17 +62,18 @@ public class Compte {
     public Compte(){
         idCompte = cmpCompte++;
         System.out.println("Propriétaire existant ? : ([O]/N)");
-        String choix = new Scanner(System.in).nextLine();
+        Scanner sc = new Scanner(System.in);
+        String choix = sc.nextLine();
         if(choix.equalsIgnoreCase("O")){
             System.out.println("Entrer l'id du propriétaire : ");
-            int idProprietaire = new Scanner(System.in).nextInt();
+            int idProprietaire = sc.nextInt();
             proprietaire = ServiceCRUD.getClientById(idProprietaire);
         }else{
             proprietaire = new Client();
         }
         System.out.println("Entrer le solde initial du compte : ");
         do{
-            solde = new Scanner(System.in).nextDouble();
+            solde = sc.nextDouble();
             if(solde < 0){
                 System.out.println("Le solde doit être positif, veuillez réessayer : ");
             }
@@ -83,25 +84,27 @@ public class Compte {
         if(solde != 0){
             journalisation.add("Dépôt de " + solde + "dh");
         }
-
+    sc.close();
     }
     public Compte(Client proprietaire){
         //Client deja existant
         idCompte = cmpCompte++;
+        Scanner sc = new Scanner(System.in);
         do {
             System.out.println("Entrer le solde initial du compte : ");
-            solde = new Scanner(System.in).nextDouble();
+            solde = sc.nextDouble();
             if (solde < 0) {
                 System.out.println("Le solde doit être positif, veuillez réessayer : ");
             }
         } while (solde < 0);
         dateCreation = new Date().toString();
-        journalisation = new ArrayList<>();
+        journalisation = new ArrayList<String>();
         journalisation.add("Création du compte le " + dateCreation);
         if(solde != 0){
             journalisation.add("Dépôt de " + solde + "dh");
         }
         this.proprietaire = proprietaire;
+        sc.close();
     }
     @Override
     public String toString() {
