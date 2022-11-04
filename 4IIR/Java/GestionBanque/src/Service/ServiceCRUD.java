@@ -65,7 +65,7 @@ public class ServiceCRUD {
         }
     }
 
-    private Compte getCompteById(int idCompte) {
+    private static Compte getCompteById(int idCompte) {
         for (Compte compte : banque.getComptes()) {
             if (compte.getIdCompte() == idCompte) {
                 return compte;

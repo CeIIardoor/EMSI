@@ -24,6 +24,8 @@ public class Client {
     private ArrayList<Compte> comptes;
     private int maxComptes = 2;
 
+    private Date dateAjout;
+
     public int getIdClient() {
         return idClient;
     }
@@ -119,6 +121,7 @@ public class Client {
         this.idClient = cmpClients++;
         this.journalisation = new ArrayList<String>();
         this.comptes = new ArrayList<Compte>(2);
+        this.dateAjout = new Date();
         this.journalisation.add("Création du client le " + new Date().toString());
         sc.close();
     }
@@ -127,11 +130,24 @@ public class Client {
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
+        this.dateAjout = new Date();
         this.journalisation = new ArrayList<String>();
         this.comptes = new ArrayList<Compte>(2);
     }
 
     public int getMaxComptes() {
         return maxComptes;
+    }
+
+    public Date getDateAjout() {
+        return dateAjout;
+    }
+
+    public double getSoldeTotal() {
+        double sum = 0;
+        for (Compte compte : comptes) {
+             sum += compte.getSolde();
+        }
+        return sum;
     }
 }

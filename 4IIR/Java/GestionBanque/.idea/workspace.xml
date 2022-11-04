@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef869a2e-b100-43cb-8dfe-fcf2c7a1621a" name="Changes" comment="a mimir" />
+    <list default="true" id="ef869a2e-b100-43cb-8dfe-fcf2c7a1621a" name="Changes" comment="a mimir">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ServiceCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ServiceCRUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ServiceQOL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ServiceQOL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ServiceUtilitaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ServiceUtilitaire.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,9 +55,14 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "last_opened_file_path": "C:/Users/lenovo/EMSI/4IIR/Java/GestionBanque",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "settings.editor.selected.configurable": "terminal"
   }
 }]]></component>
+  <component name="Push.Settings">
+    <force-push-targets>
+      <force-push-target remote-path="origin" branch="master" />
+    </force-push-targets>
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Service" />
@@ -71,7 +82,8 @@
       <workItem from="1667390673142" duration="4191000" />
       <workItem from="1667480427502" duration="11511000" />
       <workItem from="1667502962279" duration="281000" />
-      <workItem from="1667503316837" duration="10697000" />
+      <workItem from="1667503316837" duration="10945000" />
+      <workItem from="1667543423062" duration="3021000" />
     </task>
     <task id="LOCAL-00001" summary="progress projet java (Dep Inj)">
       <created>1667492908381</created>
@@ -164,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667514196617</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="a mimir">
+      <created>1667514496166</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1667514496166</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

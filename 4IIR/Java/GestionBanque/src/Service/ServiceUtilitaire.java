@@ -1,12 +1,15 @@
 package Service;
 
 import Model.Banque;
+import Model.Client;
+
+import java.util.ArrayList;
 
 public class ServiceUtilitaire {
     /* Fonctions du Service :
     public void afficherMenuServiceBanque()
-    public Object[] trierAsc(Object[] objets, Object orderByElement)
-    public Object[] trierDec(Object[] objets, Object orderByElement)
+    public Object[] trierAsc(Object orderByElement)
+    public Object[] trierDec(Object orderByElement)
 
      */
     private static Banque banque;
@@ -27,14 +30,69 @@ public class ServiceUtilitaire {
         System.out.println("9. Afficher les clients d'un compte par ordre décroissant");
     }
 
-    public Object[] trierAsc(Object[] objets, Object orderByElement) {
-        // TODO : implement polymorphism to sort by any element
-        return null;
+    public ArrayList<Client> trierAsc(String trierPar) {
+        for (int i = 0; i < ServiceUtilitaire.banque.getClients().size(); i++) {
+            for (int j = 0; j < ServiceUtilitaire.banque.getClients().size(); j++) {
+                if (trierPar.equals("date")) {
+                    if (ServiceUtilitaire.banque.getClients().get(i).getDateAjout()
+                            .compareTo(ServiceUtilitaire.banque.getClients().get(j).getDateAjout()) < 0) {
+                        Client temp = ServiceUtilitaire.banque.getClients().get(i);
+                        ServiceUtilitaire.banque.getClients().set(i, ServiceUtilitaire.banque.getClients().get(j));
+                        ServiceUtilitaire.banque.getClients().set(j, temp);
+                    }
+                } else if (trierPar.equals("solde")) {
+                    if (ServiceUtilitaire.banque.getClients().get(i).getSoldeTotal()
+                            < ServiceUtilitaire.banque.getClients().get(j).getSoldeTotal()) {
+                        Client temp = ServiceUtilitaire.banque.getClients().get(i);
+                        ServiceUtilitaire.banque.getClients().set(i, ServiceUtilitaire.banque.getClients().get(j));
+                        ServiceUtilitaire.banque.getClients().set(j, temp);
+                    }
+
+                } else if (trierPar.equals("nom")) {
+                    if (ServiceUtilitaire.banque.getClients().get(i).getNom()
+                            .compareTo(ServiceUtilitaire.banque.getClients().get(j).getNom()) < 0) {
+                        Client temp = ServiceUtilitaire.banque.getClients().get(i);
+                        ServiceUtilitaire.banque.getClients().set(i, ServiceUtilitaire.banque.getClients().get(j));
+                        ServiceUtilitaire.banque.getClients().set(j, temp);
+                    }
+                }
+            }
+        }
+        return ServiceUtilitaire.banque.getClients();
     }
 
-    public Object[] trierDec(Object[] objets, Object orderByElement) {
-        // TODO : implement polymorphism to sort by any element
-        return null;
+    public ArrayList<Client> trierDesc(String trierPar) {
+        for (int i = 0; i < ServiceUtilitaire.banque.getClients().size(); i++) {
+            for (int j = 0; j < ServiceUtilitaire.banque.getClients().size(); j++) {
+                if (trierPar.equals("date")) {
+
+                    if (ServiceUtilitaire.banque.getClients().get(i).getDateAjout()
+                            .compareTo(ServiceUtilitaire.banque.getClients().get(j).getDateAjout()) > 0) {
+                        Client temp = ServiceUtilitaire.banque.getClients().get(i);
+                        ServiceUtilitaire.banque.getClients().set(i, ServiceUtilitaire.banque.getClients().get(j));
+                        ServiceUtilitaire.banque.getClients().set(j, temp);
+                    }
+                } else if (trierPar.equals("solde")) {
+
+                    if (ServiceUtilitaire.banque.getClients().get(i).getSoldeTotal() >
+                            ServiceUtilitaire.banque.getClients().get(j).getSoldeTotal()) {
+                        Client temp = ServiceUtilitaire.banque.getClients().get(i);
+                        ServiceUtilitaire.banque.getClients().set(i, ServiceUtilitaire.banque.getClients().get(j));
+                        ServiceUtilitaire.banque.getClients().set(j, temp);
+                    }
+
+                } else if (trierPar.equals("nom")) {
+
+                    if (ServiceUtilitaire.banque.getClients().get(i).getNom()
+                            .compareTo(ServiceUtilitaire.banque.getClients().get(j).getNom()) > 0) {
+                        Client temp = ServiceUtilitaire.banque.getClients().get(i);
+                        ServiceUtilitaire.banque.getClients().set(i, ServiceUtilitaire.banque.getClients().get(j));
+                        ServiceUtilitaire.banque.getClients().set(j, temp);
+                    }
+                }
+            }
+        }
+        return ServiceUtilitaire.banque.getClients();
     }
 }
 
