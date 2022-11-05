@@ -92,7 +92,7 @@ public class Client {
     @Override
     public String toString() {
         return "Client [idClient=" + idClient + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email
-                + ", journalisation=" + journalisation + ", comptes=" + comptes + "]";
+                + ", journalisation=" + journalisation + " ]";
     }
 
     @Override
@@ -146,5 +146,11 @@ public class Client {
              sum += compte.getSolde();
         }
         return sum;
+    }
+
+    public void afficherComptes(){
+        for (Compte compte : comptes) {
+            System.out.println(compte);
+        }
     }
 }

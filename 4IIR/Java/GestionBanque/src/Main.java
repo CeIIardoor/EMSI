@@ -23,11 +23,14 @@ public class Main {
         banque.ajouterCompte(compte2);
         banque.ajouterCompte(compte3);
 
+        client1.ajouterCompte(compte1);
+        client1.ajouterCompte(compte2);
+//        client1.ajouterCompte(compte3);
 
-
-        ServiceBanque.afficherBanque();
-        ServiceBanque.afficherComptes();
-        ServiceBanque.afficherClients();
+//        ServiceBanque.afficherBanque();
+//        ServiceBanque.afficherComptes();
+//        ServiceBanque.afficherClients();
+        client1.afficherComptes();
 
     }
 }
