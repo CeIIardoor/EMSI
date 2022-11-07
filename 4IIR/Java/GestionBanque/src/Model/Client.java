@@ -123,7 +123,7 @@ public class Client {
         this.journalisation.add("Création du client le " + new Date());
     }
     public Client(String nom, String prenom, String email) {
-        this.idClient = ++cmpClients;
+        this.idClient = cmpClients++;
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;

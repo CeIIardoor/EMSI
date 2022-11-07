@@ -92,6 +92,18 @@ public class Compte {
         }
         this.proprietaire = proprietaire;
     }
+
+    public Compte(Client proprietaire, double solde){
+        idCompte = cmpCompte++;
+        this.solde = solde;
+        dateCreation = new Date();
+        journalisation = new ArrayList<String>();
+        journalisation.add("Création du compte le " + dateCreation);
+        if(solde != 0){
+            journalisation.add("Dépôt de " + solde + "dh");
+        }
+        this.proprietaire = proprietaire;
+    }
     @Override
     public String toString() {
         return "Compte[" +

@@ -27,7 +27,7 @@ public class ServiceCRUD {
         banque = _banque;
     }
 
-    public Client getClientById(int id){
+    public static Client getClientById(int id){
         for (Client client : banque.getClients()) {
             if (client.getIdClient() == id) {
                 return client;
@@ -43,7 +43,7 @@ public class ServiceCRUD {
         return compte;
     }
 
-    public Client creerEtAjouterNouveauClient(){
+    public Client creerEtAjouterClient(){
         Client client = new Client();
         banque.ajouterClient(client);
         System.out.println("Client " + client.getIdClient() + "créé et ajouté à" + banque.getNomAgence());
@@ -65,7 +65,7 @@ public class ServiceCRUD {
         }
     }
 
-    private static Compte getCompteById(int idCompte) {
+    public static Compte getCompteById(int idCompte) {
         for (Compte compte : banque.getComptes()) {
             if (compte.getIdCompte() == idCompte) {
                 return compte;
@@ -115,12 +115,13 @@ public class ServiceCRUD {
         }
     }
 
-    public Compte modifierCompte(int idCompte, Compte compte){
+    public Compte modifierCompte(int idCompte){
         Compte compteAModifier = getCompteById(idCompte);
         if (compteAModifier != null){
             do {
                 System.out.println("Saisir le nouveau solde du compte " + compteAModifier.getIdCompte() + " :");
-                compteAModifier.setSolde(new Scanner(System.in).nextDouble());
+                double s = new Scanner(System.in).nextDouble();
+                compteAModifier.setSolde(s);
             } while (compteAModifier.getSolde() < 0);
             System.out.println("Compte " + compteAModifier.getIdCompte() + " modifié");
             return compteAModifier;
@@ -130,7 +131,7 @@ public class ServiceCRUD {
         }
     }
 
-    public Client modifierClient(int idClient, Client client){
+    public Client modifierClient(int idClient){
         Client clientAModifier = getClientById(idClient);
         if (clientAModifier != null){
             Scanner sc = new Scanner(System.in);
@@ -165,6 +166,7 @@ public class ServiceCRUD {
     public boolean supprimerClient(int idClient){
         Client client = getClientById(idClient);
         if (client != null){
+            client.getComptes().clear();
             banque.supprimerClient(client);
             System.out.println("Client " + client.getIdClient() + " supprimé");
             return true;

@@ -96,7 +96,7 @@ public class Banque{
         this.clients = new ArrayList<Client>(maxClients);
     }
     public Banque(String nomAgence, String email, int maxComptes, int maxClients) {
-        idBanque = ++cmpBanques;
+        idBanque = cmpBanques++;
         this.nomAgence = nomAgence;
         this.email = email;
         this.maxComptes = maxComptes;
