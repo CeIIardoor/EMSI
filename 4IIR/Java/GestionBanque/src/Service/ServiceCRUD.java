@@ -97,19 +97,20 @@ public class ServiceCRUD {
     }
 
     public void consulterDetailCompte(int idCompte){
-        Compte compte = getCompteById(idCompte);
+        Compte compte = chercherUnCompte(idCompte);
         if (compte != null){
             System.out.println("Détail du compte " + compte.getIdCompte() + " :");
-            System.out.println(compte.toString());
+            System.out.println(compte);
         } else {
             System.out.println("Compte inexistant");
         }
     }
 
     public void consulterDetailClient(int idClient){
-        Client client = getClientById(idClient);
+        Client client = chercherUnClient(idClient);
         if (client != null){
-            System.out.println("Détail du client " + client.toString());
+            System.out.println("Détail du client " + client.getIdClient() + " :");
+            System.out.println(client);
         } else {
             System.out.println("Client inexistant");
         }

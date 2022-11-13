@@ -16,21 +16,16 @@ public class Client {
     public boolean equals(Object autreClient)
      */
     private static int cmpClients = 0;
-    private int idClient;
+    private final int idClient;
     private String nom;
     private String prenom;
     private String email;
-    private ArrayList<String> journalisation;
-    private ArrayList<Compte> comptes;
-    private int maxComptes = 2;
-    private Date dateAjout;
+    private final ArrayList<String> journalisation;
+    private final ArrayList<Compte> comptes;
+    private final Date dateAjout;
 
     public int getIdClient() {
         return idClient;
-    }
-
-    public void setIdClient(int idClient) {
-        this.idClient = idClient;
     }
 
     public String getNom() {
@@ -57,36 +52,12 @@ public class Client {
         this.email = email;
     }
 
-    public ArrayList<String> getJournalisation() {
-        return journalisation;
-    }
-
-    public void setJournalisation(ArrayList<String> journalisation) {
-        this.journalisation = journalisation;
-    }
-
     public ArrayList<Compte> getComptes() {
         return comptes;
     }
 
-    public void setComptes(ArrayList<Compte> comptes) {
-        this.comptes = comptes;
-    }
-
     public void ajouterCompte(Compte compte) {
         this.comptes.add(compte);
-    }
-
-    public void retirerCompte(Compte compte) {
-        this.comptes.remove(compte);
-    }
-
-    public void ajouterJournalisation(String journalisation) {
-        this.journalisation.add(journalisation);
-    }
-
-    public void retirerJournalisation(String journalisation) {
-        this.journalisation.remove(journalisation);
     }
 
     @Override
@@ -117,8 +88,8 @@ public class Client {
             this.email = new Scanner(System.in).nextLine();
         } while (!this.email.matches("^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\\.[a-z]{2,4}$"));
         this.idClient = cmpClients++;
-        this.journalisation = new ArrayList<String>();
-        this.comptes = new ArrayList<Compte>(2);
+        this.journalisation = new ArrayList<>();
+        this.comptes = new ArrayList<>(2);
         this.dateAjout = new Date();
         this.journalisation.add("Création du client le " + new Date());
     }
@@ -128,12 +99,13 @@ public class Client {
         this.prenom = prenom;
         this.email = email;
         this.dateAjout = new Date();
-        this.journalisation = new ArrayList<String>();
-        this.comptes = new ArrayList<Compte>(2);
+        this.journalisation = new ArrayList<>();
+        this.comptes = new ArrayList<>(2);
+        this.journalisation.add("Création du client le " + new Date());
     }
 
     public int getMaxComptes() {
-        return maxComptes;
+        return 2;
     }
 
     public Date getDateAjout() {
@@ -146,11 +118,5 @@ public class Client {
              sum += compte.getSolde();
         }
         return sum;
-    }
-
-    public void afficherComptes(){
-        for (Compte compte : comptes) {
-            System.out.println(compte);
-        }
     }
 }

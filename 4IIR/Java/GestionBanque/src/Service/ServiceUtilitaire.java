@@ -10,7 +10,7 @@ public class ServiceUtilitaire {
     public void afficherMenuServiceBanque()
     public Object[] trierAsc(Object orderByElement)
     public Object[] trierDec(Object orderByElement)
-     */
+    */
     private static Banque banque;
 
     public ServiceUtilitaire(Banque _banque){

@@ -16,55 +16,20 @@ public class Banque{
     public boolean equals(Object autreBanque)
      */
     private static int cmpBanques = 0;
-    private int idBanque;
-    private String nomAgence;
+    private final int idBanque;
+    private final String nomAgence;
     private String email;
     private int maxComptes;
     private int maxClients;
-    private ArrayList<Compte> comptes;
-    private ArrayList<Client> clients;
-
-    public Client getClientById(int idProprietaire) {
-        for (Client client : clients) {
-            if (client.getIdClient() == idProprietaire) {
-                return client;
-            }
-        }
-        return null;
-    }
-
-    public int getIdBanque() {
-        return idBanque;
-    }
+    private final ArrayList<Compte> comptes;
+    private final ArrayList<Client> clients;
 
     public String getNomAgence() {
         return nomAgence;
     }
 
-    public void setNomAgence(String nomAgence) {
-        this.nomAgence = nomAgence;
-    }
-
     public String getEmailAgence() {
         return email;
-    }
-
-    public void setEmailAgence(String email) {
-        this.email = email;
-    }
-
-    public int getMaxComptes() { return maxComptes; }
-
-    public void setMaxComptes(int maxComptes) {
-        this.maxComptes = maxComptes;
-    }
-
-    public int getMaxClients() {
-        return maxClients;
-    }
-
-    public void setMaxClients(int maxClients) {
-        this.maxClients = maxClients;
     }
 
     public ArrayList<Compte> getComptes() {
@@ -92,8 +57,8 @@ public class Banque{
             System.out.println("Entrer le nombre max de clients (>=10) :");
             this.maxClients = sc.nextInt();
         } while (this.maxClients < 10);
-        this.comptes = new ArrayList<Compte>(maxComptes);
-        this.clients = new ArrayList<Client>(maxClients);
+        this.comptes = new ArrayList<>(maxComptes);
+        this.clients = new ArrayList<>(maxClients);
     }
     public Banque(String nomAgence, String email, int maxComptes, int maxClients) {
         idBanque = cmpBanques++;
@@ -101,8 +66,8 @@ public class Banque{
         this.email = email;
         this.maxComptes = maxComptes;
         this.maxClients = maxClients;
-        this.comptes = new ArrayList<Compte>(maxComptes);
-        this.clients = new ArrayList<Client>(maxClients);
+        this.comptes = new ArrayList<>(maxComptes);
+        this.clients = new ArrayList<>(maxClients);
     }
 
     public String toString() {
@@ -139,15 +104,6 @@ public class Banque{
         } else {
             System.out.println("Impossible d'ajouter le client " + client.getIdClient() + " : nombre max de clients atteint");
         }
-    }
-
-    public Compte getCompteById(int idCompte){
-        for (Compte compte : this.comptes){
-            if (compte.getIdCompte() == idCompte){
-                System.out.println(compte);
-            }
-        }
-        return null;
     }
 
     public void supprimerCompte(Compte compte) {
