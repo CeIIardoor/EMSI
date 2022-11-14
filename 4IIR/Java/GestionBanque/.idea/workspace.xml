@@ -3,16 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ef869a2e-b100-43cb-8dfe-fcf2c7a1621a" name="Changes" comment="Menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionBanque/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Model/Banque.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionBanque/Model/Banque.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Model/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionBanque/Model/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Service/ServiceCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionBanque/Service/ServiceCRUD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MenuBanque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MenuBanque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Banque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Banque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ServiceCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ServiceCRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ServiceUtilitaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ServiceUtilitaire.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +100,8 @@
       <workItem from="1667653950520" duration="3603000" />
       <workItem from="1667822630301" duration="7472000" />
       <workItem from="1667835112642" duration="4720000" />
-      <workItem from="1668343116691" duration="939000" />
+      <workItem from="1668343116691" duration="2276000" />
+      <workItem from="1668439562229" duration="106000" />
     </task>
     <task id="LOCAL-00001" summary="progress projet java (Dep Inj)">
       <created>1667492908381</created>
@@ -252,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667830924224</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Menu">
+      <created>1668344356862</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1668344356862</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
