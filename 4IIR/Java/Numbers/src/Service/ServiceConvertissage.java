@@ -5,7 +5,7 @@ import Model.Decimal;
 import Model.Entier;
 import Model.Number;
 
-public class ConverterService {
+public class ServiceConvertissage {
     public static Number toComplexe(Number n){
         switch (n.getType()) {
             case "Entier":

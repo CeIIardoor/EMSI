@@ -5,7 +5,7 @@ import Model.Decimal;
 import Model.Entier;
 import Model.Number;
 
-public class ReaderService {
+public class ServiceLecture {
     public static Number read(String s){
         if (s.contains("+") && s.contains("i")){
             return new Complexe(Double.parseDouble(s.substring(0, s.indexOf("+"))), Double.parseDouble(s.substring(s.indexOf("+")+1, s.indexOf("i"))));

@@ -1,7 +1,7 @@
 package Controller;
 
 import Model.Number;
-import Service.ReaderService;
+import Service.ServiceLecture;
 import Service.ServiceNombres;
 
 import java.util.Scanner;
@@ -23,45 +23,45 @@ public class MenuPrincipale {
             switch (choix) {
                 case "1":
                     System.out.println("Entrer le premier nombre :");
-                    Number n1 = ReaderService.read(new Scanner(System.in).nextLine());
+                    Number n1 = ServiceLecture.read(new Scanner(System.in).nextLine());
                     System.out.println("Entrer le deuxième nombre :");
-                    Number n2 = ReaderService.read(new Scanner(System.in).nextLine());
+                    Number n2 = ServiceLecture.read(new Scanner(System.in).nextLine());
                     System.out.println("Résultat : " + ServiceNombres.add(n1, n2));
                     break;
                 case "2":
                     System.out.println("Entrer le premier nombre :");
-                    n1 = ReaderService.read(new Scanner(System.in).nextLine());
+                    n1 = ServiceLecture.read(new Scanner(System.in).nextLine());
                     System.out.println("Entrer le deuxième nombre :");
-                    n2 = ReaderService.read(new Scanner(System.in).nextLine());
+                    n2 = ServiceLecture.read(new Scanner(System.in).nextLine());
                     System.out.println("Résultat : " + ServiceNombres.minus(n1, n2));
                     break;
                 case "3":
                     System.out.println("Entrer le premier nombre :");
-                    n1 = ReaderService.read(new Scanner(System.in).nextLine());
+                    n1 = ServiceLecture.read(new Scanner(System.in).nextLine());
                     System.out.println("Entrer le deuxième nombre :");
-                    n2 = ReaderService.read(new Scanner(System.in).nextLine());
+                    n2 = ServiceLecture.read(new Scanner(System.in).nextLine());
                     System.out.println("Résultat : " + ServiceNombres.times(n1, n2));
                     break;
                 case "4":
                     System.out.println("Entrer le premier nombre :");
-                    n1 = ReaderService.read(new Scanner(System.in).nextLine());
+                    n1 = ServiceLecture.read(new Scanner(System.in).nextLine());
                     System.out.println("Entrer le deuxième nombre :");
-                    n2 = ReaderService.read(new Scanner(System.in).nextLine());
+                    n2 = ServiceLecture.read(new Scanner(System.in).nextLine());
                     System.out.println("Résultat : " + ServiceNombres.divide(n1, n2));
                     break;
                 case "5":
                     System.out.println("Entrer le nombre :");
-                    n1 = ReaderService.read(new Scanner(System.in).nextLine());
+                    n1 = ServiceLecture.read(new Scanner(System.in).nextLine());
                     System.out.println("Résultat : " + ServiceNombres.inverse(n1));
                     break;
                 case "6":
                     System.out.println("Entrer le nombre :");
-                    n1 = ReaderService.read(new Scanner(System.in).nextLine());
+                    n1 = ServiceLecture.read(new Scanner(System.in).nextLine());
                     System.out.println("Résultat : " + ServiceNombres.conjugate(n1));
                     break;
                 case "7":
                     System.out.println("Entrer le nombre :");
-                    n1 = ReaderService.read(new Scanner(System.in).nextLine());
+                    n1 = ServiceLecture.read(new Scanner(System.in).nextLine());
                     System.out.println("Résultat : " + ServiceNombres.module(n1));
                     break;
 
