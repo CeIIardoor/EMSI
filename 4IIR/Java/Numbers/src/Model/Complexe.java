@@ -28,7 +28,15 @@ public class Complexe extends Number{
 
     @Override
     public String toString() {
-        return "Complexe{" + reel + "+" + imaginaire + "i}";
+        if(imaginaire < 0){
+            return "Complexe{" + reel + " - " + Math.abs(imaginaire) + "i}";
+        }
+        else if (imaginaire == 0){
+            return "Complexe{" + reel + "}";
+        }
+        else {
+            return "Complexe{" + reel + " + " + imaginaire + "i}";
+        }
     }
 
 }
