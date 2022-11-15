@@ -12,10 +12,8 @@ public class ServiceConvertissage {
                 return new Complexe(((Entier) n).getValue(), 0);
             case "Decimal":
                 return new Complexe(((Decimal) n).getValue(), 0);
-            case "Complexe":
-                return n;
             default:
-                return null;
+                return n;
         }
     }
 
@@ -23,25 +21,32 @@ public class ServiceConvertissage {
         switch (n.getType()) {
             case "Integer":
                 return new Decimal(((Entier) n).getValue());
-            case "Decimal":
-                return n;
             case "Complexe":
                 return new Decimal(((Complexe) n).getReel());
             default:
-                return null;
+                return n;
         }
     }
 
     public static Number toInteger(Number n){
         switch (n.getType()) {
-            case "Integer":
-                return n;
             case "Decimal":
                 return new Entier((int) ((Decimal) n).getValue());
             case "Complexe":
                 return new Entier((int) ((Complexe) n).getReel());
             default:
-                return null;
+                return n;
+        }
+    }
+    public static Number fromComplexe(Complexe n){
+        if (n.getImaginaire() == 0 && n.getReel() % 1 == 0){
+            return toInteger(n);
+        }
+        else if (n.getImaginaire() == 0){
+            return toDecimal(n);
+        }
+        else {
+            return n;
         }
     }
 }
