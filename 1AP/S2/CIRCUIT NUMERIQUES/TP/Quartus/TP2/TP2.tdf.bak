@@ -1,8 +1,0 @@
-Subdesign TP25
-(
-	E1,En:input;
-	S:output;
-)
-Begin
-	S=E1#En;
-END;
