@@ -15,7 +15,7 @@ public class Client {
     Méthodes : public String toString(),
     public boolean equals(Object autreClient)
      */
-    private static int cmpClients = 0;
+    private static int cmpClients = 1;
     private final int idClient;
     private String nom;
     private String prenom;

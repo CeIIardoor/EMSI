@@ -13,7 +13,6 @@ public class Main {
         Client client3 = new Client("Client3", "Test", "client3@test.com");
 
         Compte compte1 = new Compte(client1, 1000);
-        Compte compte11 = new Compte(client1, 1111);
         Compte compte2 = new Compte(client2, 2000);
         Compte compte3 = new Compte(client3, 3000);
 
@@ -22,17 +21,14 @@ public class Main {
         banque.ajouterClient(client3);
 
         banque.ajouterCompte(compte1);
-        banque.ajouterCompte(compte11);
         banque.ajouterCompte(compte2);
         banque.ajouterCompte(compte3);
 
         ServiceCRUD serviceCRUD = new ServiceCRUD(banque);
         serviceCRUD.lierCompteAuClient(compte1.getIdCompte(), client1.getIdClient());
-        serviceCRUD.lierCompteAuClient(compte11.getIdCompte(), client1.getIdClient());
         serviceCRUD.lierCompteAuClient(compte2.getIdCompte(), client2.getIdClient());
         serviceCRUD.lierCompteAuClient(compte3.getIdCompte(), client3.getIdClient());
 
-        System.out.println("_____________________________");
         MenuBanque menuBanque = new MenuBanque(banque);
         menuBanque.afficherMenuPrincipale();
     }

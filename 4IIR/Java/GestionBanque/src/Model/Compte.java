@@ -18,7 +18,7 @@ public class Compte {
     Méthodes : public String toString(),
     public boolean equals(Object autreCompte)
      */
-    public static int cmpCompte = 0;
+    public static int cmpCompte = 1;
     private int idCompte;
     private double solde;
     private Date dateCreation;

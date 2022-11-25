@@ -37,10 +37,32 @@ public class ServiceCRUD {
     }
 
     public Compte creerEtAjouterCompte(){
-        Compte compte = new Compte();
-        banque.ajouterCompte(compte);
-        System.out.println("Compte " + compte.getIdCompte() + "créé et ajouté à" + banque.getNomAgence());
-        return compte;
+        System.out.println("Client existant ? (o/n)");
+        Scanner clavier = new Scanner(System.in);
+        String reponse = clavier.nextLine();
+        if (reponse.equals("o")){
+            System.out.println("Entrer l'id du Client : ");
+            int idCompte = clavier.nextInt();
+            Client client = getClientById(idCompte);
+            if (client != null){
+                Compte compte = new Compte(client);
+                banque.getComptes().add(compte);
+                return compte;
+            }
+            else {
+                System.out.println("Client inexistant");
+                return null;
+            }
+        }
+        else if (reponse.equals("n")){
+            Compte compte = new Compte();
+            banque.ajouterCompte(compte);
+            return compte;
+        }
+        else {
+            System.out.println("Réponse invalide");
+            return null;
+        }
     }
 
     public Client creerEtAjouterClient(){

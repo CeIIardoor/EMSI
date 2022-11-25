@@ -15,7 +15,7 @@ public class Banque{
     Méthodes : public String toString(),
     public boolean equals(Object autreBanque)
      */
-    private static int cmpBanques = 0;
+    private static int cmpBanques = 1;
     private final int idBanque;
     private final String nomAgence;
     private String email;
