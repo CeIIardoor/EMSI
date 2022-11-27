@@ -50,10 +50,11 @@ public class Client extends User {
 
     @Override
     public String toString() {
-        return "Client [idClient=" + idClient + '\n' +
-                ", nom=" + nom + '\n' +
-                ", prenom=" + prenom + '\n' +
-                ", email=" + email + '\n' +
+        return "Client [" + '\n' +
+                "+ idClient=" + idClient + '\n' +
+                "- nom=" + nom + '\n' +
+                "- prenom=" + prenom + '\n' +
+                "- email=" + email + '\n' +
                 " ]";
     }
 

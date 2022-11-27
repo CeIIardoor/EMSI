@@ -107,10 +107,9 @@ public class Compte {
     @Override
     public String toString() {
         return "Compte[" + '\n' +
-                "idCompte=" + idCompte + '\n' +
-                ", solde=" + solde + '\n' +
-                ", dateCreation='" + dateCreation + '\n' +
-                ", proprietaire=" + proprietaire + '\n' +
+                "+ idCompte=" + idCompte + '\n' +
+                "- solde=" + solde + '\n' +
+                "- dateCreation='" + dateCreation + '\n' +
                 ']';
     }
 

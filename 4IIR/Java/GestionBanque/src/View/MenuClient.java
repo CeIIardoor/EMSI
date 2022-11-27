@@ -77,7 +77,12 @@ public class MenuClient implements IMenuClient {
         Client client = (Client) user;
         System.out.println("____________________Mes opérations______________________");
         for (int i = 0; i < client.getComptes().size(); i++) {
-            System.out.println(i + 1 + ". " + client.getComptes().get(i).toString());
+            System.out.println("Compte " + client.getComptes().get(i).getIdCompte());
+            System.out.println("Solde: " + client.getComptes().get(i).getSolde());
+            System.out.println("Opérations: ");
+            for (int j = 0; j < client.getComptes().get(i).getJournalisation().size(); j++) {
+                System.out.println(j+1 + "." + client.getComptes().get(i).getJournalisation().get(j));
+            }
         }
         System.out.println("____________________________________________________");
     }

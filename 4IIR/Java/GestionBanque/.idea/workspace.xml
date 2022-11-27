@@ -1,31 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef869a2e-b100-43cb-8dfe-fcf2c7a1621a" name="Changes" comment="Strategy Design Pattern">
-      <change afterPath="$PROJECT_DIR$/src/Controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/IAuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/IMenuAuth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/IMenuClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/MenuAuth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/MenuClient.java" afterDir="false" />
+    <list default="true" id="ef869a2e-b100-43cb-8dfe-fcf2c7a1621a" name="Changes" comment="Auth facade">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Controller/MenuBanque.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionBanque/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Model/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionBanque/Model/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Model/Compte.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionBanque/Model/Compte.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Service/ServiceBanque.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionBanque/Service/ServiceBanque.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Service/ServiceCRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionBanque/Service/ServiceCRUD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Service/ServiceQOL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionBanque/Service/ServiceQOL.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/IMenuBanque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/IMenuAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MenuBanque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MenuAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Service/ServiceTransactionnel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionBanque/Service/ServiceTransactionnel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Service/ServiceUtilitaire.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionBanque/Service/ServiceUtilitaire.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Test/TestCRUD.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Test/TestQOL.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Test/TestTransactionnel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionBanque/Test/TestUtilitaire.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/Compte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Compte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/TestCRUD.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/TestQOL.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/TestTransactionnel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/TestUtilitaire.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +115,7 @@
       <workItem from="1668439562229" duration="106000" />
       <workItem from="1669036869276" duration="5314000" />
       <workItem from="1669045317107" duration="91000" />
-      <workItem from="1669545657669" duration="12963000" />
+      <workItem from="1669545657669" duration="13722000" />
     </task>
     <task id="LOCAL-00001" summary="progress projet java (Dep Inj)">
       <created>1667492908381</created>
@@ -284,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669551651132</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Auth facade">
+      <created>1669567159754</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1669567159754</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +310,8 @@
     <MESSAGE value="Suppression" />
     <MESSAGE value="Menu" />
     <MESSAGE value="Strategy Design Pattern" />
-    <option name="LAST_COMMIT_MESSAGE" value="Strategy Design Pattern" />
+    <MESSAGE value="Auth facade" />
+    <option name="LAST_COMMIT_MESSAGE" value="Auth facade" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
