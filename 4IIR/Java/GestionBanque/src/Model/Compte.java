@@ -19,10 +19,10 @@ public class Compte {
     public boolean equals(Object autreCompte)
      */
     public static int cmpCompte = 1;
-    private int idCompte;
+    private final int idCompte;
     private double solde;
     private Date dateCreation;
-    private ArrayList<String> journalisation;
+    private final ArrayList<String> journalisation;
     private Client proprietaire;
 
     public int getIdCompte() {

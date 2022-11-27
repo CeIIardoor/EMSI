@@ -2,12 +2,11 @@ import Controller.MenuBanque;
 import Model.Banque;
 import Model.Client;
 import Model.Compte;
-import Service.ServiceCRUD;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("____________SETUP____________");
-        Banque banque = new Banque("Banque de Test", "banque@test.com", 100, 1000);
+        Banque banque = new Banque("Banque de Test", "banque@test.com", 1000);
         Client client1 = new Client("Client1", "Test", "client1@test.com");
         Client client2 = new Client("Client2", "Test", "client2@test.com");
         Client client3 = new Client("Client3", "Test", "client3@test.com");
@@ -20,14 +19,10 @@ public class Main {
         banque.ajouterClient(client2);
         banque.ajouterClient(client3);
 
-        banque.ajouterCompte(compte1);
-        banque.ajouterCompte(compte2);
-        banque.ajouterCompte(compte3);
-
-        ServiceCRUD serviceCRUD = new ServiceCRUD(banque);
-        serviceCRUD.lierCompteAuClient(compte1.getIdCompte(), client1.getIdClient());
-        serviceCRUD.lierCompteAuClient(compte2.getIdCompte(), client2.getIdClient());
-        serviceCRUD.lierCompteAuClient(compte3.getIdCompte(), client3.getIdClient());
+        client1.ajouterCompte(compte1);
+        client2.ajouterCompte(compte2);
+        client3.ajouterCompte(compte3);
+        System.out.println("____________SETUP DONE____________");
 
         MenuBanque menuBanque = new MenuBanque(banque);
         menuBanque.afficherMenuPrincipale();

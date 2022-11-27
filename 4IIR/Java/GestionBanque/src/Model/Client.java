@@ -10,7 +10,7 @@ public class Client {
     Attributs : idClient, nom, prénom, email, tableau de journalisation et
     un tableau de comptes
     Accès : getters, setters
-    (email doit être conforme au format Email )
+    (email doit être conforme au format Email)
     (id doit être auto-généré)
     Méthodes : public String toString(),
     public boolean equals(Object autreClient)
@@ -20,9 +20,9 @@ public class Client {
     private String nom;
     private String prenom;
     private String email;
-    private final ArrayList<String> journalisation;
-    private final ArrayList<Compte> comptes;
-    private final Date dateAjout;
+    private ArrayList<String> journalisation;
+    private ArrayList<Compte> comptes;
+    private Date dateAjout;
 
     public int getIdClient() {
         return idClient;

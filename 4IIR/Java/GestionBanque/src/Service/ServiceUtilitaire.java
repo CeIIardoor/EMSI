@@ -5,12 +5,7 @@ import Model.Client;
 
 import java.util.ArrayList;
 
-public class ServiceUtilitaire {
-    /* Fonctions du Service :
-    public void afficherMenuServiceBanque()
-    public Object[] trierAsc(Object orderByElement)
-    public Object[] trierDec(Object orderByElement)
-    */
+public class ServiceUtilitaire implements IServiceUtilitaire {
     private static Banque banque;
 
     public ServiceUtilitaire(Banque _banque){

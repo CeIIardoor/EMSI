@@ -6,73 +6,13 @@ import Service.*;
 
 import java.util.Scanner;
 
-public class MenuBanque {
+public class MenuBanque implements IMenuBanque {
     private static Banque banque;
 
     public MenuBanque(Banque _banque){
         banque = _banque;
     }
 
-    public static void afficherMenuBanque(){
-        System.out.println("________________________________________________________________________________");
-        System.out.println("|_______________________________| MENU BANQUE |_________________________________|");
-        System.out.println("|___| Infos |_____________________________________| Services |__________________|");
-        System.out.println("| 1. Afficher la banque                       | 4. Service CRUD                 |");
-        System.out.println("| 2. Afficher les clients                     | 5. Service Transactionnel       |");
-        System.out.println("| 3. Afficher les comptes                     | 6. Service Utilitaire           |");
-        System.out.println("|                                             | 7. Service QOL                  |");
-        System.out.println("|                               9. Quitter                                      |");
-        System.out.println("________________________________________________________________________________");
-        System.out.println("Entrer votre choix : ");
-    }
-
-    public static void afficherMenuCRUD(){
-        System.out.println("________________________________________________________________________________");
-        System.out.println("|_______________________________| MENU CRUD |___________________________________|");
-        System.out.println("|_______________________________________________________________________________|");
-        System.out.println("| 1. Ajouter un client                   | 5. Supprimer un client               |");
-        System.out.println("| 2. Ajouter un compte                   | 6. Supprimer un compte               |");
-        System.out.println("| 3. Modifier un client                  | 7. Consulter details d'un client     |");
-        System.out.println("| 4. Modifier un compte                  | 8. Consulter details d'un compte     |");
-        System.out.println("|                                0. Retour                                      |");
-        System.out.println("________________________________________________________________________________");
-        System.out.println("Entrer votre choix : ");
-    }
-
-    public static void afficherMenuQOL(){
-        System.out.println("________________________________________________________________________________");
-        System.out.println("|_______________________________| MENU QOL |____________________________________|");
-        System.out.println("|_______________________________________________________________________________|");
-        System.out.println("| 1. Afficher les comptes d'un client       | 4. Afficher les clients par type  |");
-        System.out.println("| 2. Afficher les clients d'un compte       | 5. Afficher les comptes par solde |");
-        System.out.println("| 3. Afficher les comptes par type          | 6. Afficher les clients par solde |");
-        System.out.println("|                                     0. Retour                                 |");
-        System.out.println("________________________________________________________________________________");
-        System.out.println("Entrer votre choix : ");
-    }
-
-    public static void afficherMenuTransactionnel(){
-        System.out.println("________________________________________________________________________________");
-        System.out.println("|_______________________________| MENU TRANSACTIONNEL |_________________________|");
-        System.out.println("|_______________________________________________________________________________|");
-        System.out.println("| 1. Créditer un compte                                                         |");
-        System.out.println("| 2. Débiter un compte                                                          |");
-        System.out.println("| 3. Virement                                                                   |");
-        System.out.println("|                               0. Retour                                       |");
-        System.out.println("________________________________________________________________________________");
-        System.out.println("Entrer votre choix : ");
-    }
-
-    public static void afficherMenuUtilitaire(){
-        System.out.println("________________________________________________________________________________");
-        System.out.println("|_______________________________| MENU UTILITAIRE |_____________________________|");
-        System.out.println("|_______________________________________________________________________________|");
-        System.out.println("| 1. Trier ascendant les clients                                                |");
-        System.out.println("| 2. Trier descendant les clients                                               |");
-        System.out.println("| 0. Retour                                                                     |");
-        System.out.println("________________________________________________________________________________");
-        System.out.println("Entrer votre choix : ");
-    }
     public void afficherMenuPrincipale(){
         int choix;
         do{
@@ -293,6 +233,68 @@ public class MenuBanque {
             }
         } while (choix != 9);
     }
+
+    public static void afficherMenuBanque(){
+        System.out.println("________________________________________________________________________________");
+        System.out.println("|_______________________________| MENU BANQUE |_________________________________|");
+        System.out.println("|___| Infos |_____________________________________| Services |__________________|");
+        System.out.println("| 1. Afficher la banque                       | 4. Service CRUD                 |");
+        System.out.println("| 2. Afficher les clients                     | 5. Service Transactionnel       |");
+        System.out.println("| 3. Afficher les comptes                     | 6. Service Utilitaire           |");
+        System.out.println("|                                             | 7. Service QOL                  |");
+        System.out.println("|                               9. Quitter                                      |");
+        System.out.println("________________________________________________________________________________");
+        System.out.println("Entrer votre choix : ");
+    }
+
+    public static void afficherMenuCRUD(){
+        System.out.println("________________________________________________________________________________");
+        System.out.println("|_______________________________| MENU CRUD |___________________________________|");
+        System.out.println("|_______________________________________________________________________________|");
+        System.out.println("| 1. Ajouter un client                   | 5. Supprimer un client               |");
+        System.out.println("| 2. Ajouter un compte                   | 6. Supprimer un compte               |");
+        System.out.println("| 3. Modifier un client                  | 7. Consulter details d'un client     |");
+        System.out.println("| 4. Modifier un compte                  | 8. Consulter details d'un compte     |");
+        System.out.println("|                                0. Retour                                      |");
+        System.out.println("________________________________________________________________________________");
+        System.out.println("Entrer votre choix : ");
+    }
+
+    public static void afficherMenuQOL(){
+        System.out.println("________________________________________________________________________________");
+        System.out.println("|_______________________________| MENU QOL |____________________________________|");
+        System.out.println("|_______________________________________________________________________________|");
+        System.out.println("| 1. Afficher les comptes d'un client       | 4. Afficher les clients par type  |");
+        System.out.println("| 2. Afficher les clients d'un compte       | 5. Afficher les comptes par solde |");
+        System.out.println("| 3. Afficher les comptes par type          | 6. Afficher les clients par solde |");
+        System.out.println("|                                     0. Retour                                 |");
+        System.out.println("________________________________________________________________________________");
+        System.out.println("Entrer votre choix : ");
+    }
+
+    public static void afficherMenuTransactionnel(){
+        System.out.println("________________________________________________________________________________");
+        System.out.println("|_______________________________| MENU TRANSACTIONNEL |_________________________|");
+        System.out.println("|_______________________________________________________________________________|");
+        System.out.println("| 1. Créditer un compte                                                         |");
+        System.out.println("| 2. Débiter un compte                                                          |");
+        System.out.println("| 3. Virement                                                                   |");
+        System.out.println("|                               0. Retour                                       |");
+        System.out.println("________________________________________________________________________________");
+        System.out.println("Entrer votre choix : ");
+    }
+
+    public static void afficherMenuUtilitaire(){
+        System.out.println("________________________________________________________________________________");
+        System.out.println("|_______________________________| MENU UTILITAIRE |_____________________________|");
+        System.out.println("|_______________________________________________________________________________|");
+        System.out.println("| 1. Trier ascendant les clients                                                |");
+        System.out.println("| 2. Trier descendant les clients                                               |");
+        System.out.println("| 0. Retour                                                                     |");
+        System.out.println("________________________________________________________________________________");
+        System.out.println("Entrer votre choix : ");
+    }
+
 
 
 }

@@ -19,10 +19,8 @@ public class Banque{
     private final int idBanque;
     private final String nomAgence;
     private String email;
-    private int maxComptes;
     private int maxClients;
-    private final ArrayList<Compte> comptes;
-    private final ArrayList<Client> clients;
+    private ArrayList<Client> clients;
 
     public String getNomAgence() {
         return nomAgence;
@@ -33,6 +31,10 @@ public class Banque{
     }
 
     public ArrayList<Compte> getComptes() {
+        ArrayList<Compte> comptes = new ArrayList<>();
+        for (Client client : clients) {
+            comptes.addAll(client.getComptes());
+        }
         return comptes;
     }
 
@@ -50,29 +52,22 @@ public class Banque{
             this.email = sc.nextLine();
         } while (!this.email.matches("^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\\.[a-z]{2,4}$"));
         do {
-            System.out.println("Entrer le nombre max de comptes (>=10) :");
-            this.maxComptes = sc.nextInt();
-        } while (this.maxComptes < 10);
-        do {
             System.out.println("Entrer le nombre max de clients (>=10) :");
             this.maxClients = sc.nextInt();
         } while (this.maxClients < 10);
-        this.comptes = new ArrayList<>(maxComptes);
         this.clients = new ArrayList<>(maxClients);
     }
-    public Banque(String nomAgence, String email, int maxComptes, int maxClients) {
+    public Banque(String nomAgence, String email, int maxClients) {
         idBanque = cmpBanques++;
         this.nomAgence = nomAgence;
         this.email = email;
-        this.maxComptes = maxComptes;
         this.maxClients = maxClients;
-        this.comptes = new ArrayList<>(maxComptes);
         this.clients = new ArrayList<>(maxClients);
     }
 
     public String toString() {
         return "Banque [idBanque=" + idBanque + ", nomAgence=" + nomAgence + ", email=" + email
-                + ", maxComptes=" + maxComptes + ", maxClients=" + maxClients + ", comptes=" + comptes + ", clients="
+                +  ", maxClients=" + maxClients  + ", clients="
                 + clients + "]";
     }
 
@@ -84,17 +79,9 @@ public class Banque{
         if (getClass() != autreBanque.getClass())
             return false;
         Banque other = (Banque) autreBanque;
-        return idBanque == other.idBanque && maxClients == other.maxClients && maxComptes == other.maxComptes
-                && Objects.equals(clients, other.clients) && Objects.equals(comptes, other.comptes)
+        return idBanque == other.idBanque && maxClients == other.maxClients
+                && Objects.equals(clients, other.clients)
                 && Objects.equals(email, other.email) && Objects.equals(nomAgence, other.nomAgence);
-    }
-    public void ajouterCompte(Compte compte){
-        if (this.comptes.size() < this.maxComptes){
-            this.comptes.add(compte);
-            System.out.println("Compte" + compte.getIdCompte() + " ajouté avec succès");
-        } else {
-            System.out.println("Impossible d'ajouter le compte " + compte.getIdCompte() + " : nombre max de comptes atteint");
-        }
     }
 
     public void ajouterClient(Client client){
@@ -103,15 +90,6 @@ public class Banque{
             System.out.println("Client" + client.getIdClient() + " ajouté avec succès");
         } else {
             System.out.println("Impossible d'ajouter le client " + client.getIdClient() + " : nombre max de clients atteint");
-        }
-    }
-
-    public void supprimerCompte(Compte compte) {
-        if (this.comptes.contains(compte)) {
-            this.comptes.remove(compte);
-            System.out.println("Compte " + compte.getIdCompte() + " supprimé avec succès");
-        } else {
-            System.out.println("Impossible de supprimer le compte " + compte.getIdCompte());
         }
     }
 

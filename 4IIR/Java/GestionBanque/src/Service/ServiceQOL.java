@@ -1,28 +1,15 @@
 package Service;
 
 import Model.Banque;
-import Model.Client;
 
-import java.util.ArrayList;
-
-public class ServiceQOL {
-    /* public void consulterInformationsBanque(Scanner clavier)
-    public void listerClientsDeLaBanque(Scanner clavier)
-    è Ordonné par leur date d’ajout
-    è Ordonné par leurs soldes de comptes (ordre croissant ||
-    décroissant)
-    è Ordonné alphabétiquement (selon leur nom et prénom)
-    public Client[] trierClientsParDate (Scanner clavier)
-    public Client[] trierClientsParSolde (Scanner clavier)
-    public Client[] trierClientsParNom (Scanner clavier)
-     */
+public class ServiceQOL implements IServiceQOL {
 
     private static Banque banque;
 
     public ServiceQOL(Banque _banque){
             banque = _banque;
     }
-
+    @Override
     public void consulterInformationsBanque() {
         System.out.println("Informations de la banque :");
         System.out.println("Nom : " + ServiceQOL.banque.getNomAgence());
@@ -39,39 +26,36 @@ public class ServiceQOL {
         }
     }
 
-    public ArrayList<Client> trierClientsParDate(String ordreDeTri) {
+    public void trierClientsParDate(String ordreDeTri) {
         ServiceUtilitaire serviceUtilitaire = new ServiceUtilitaire(ServiceQOL.banque);
         if (ordreDeTri.equals("asc")) {
-            return serviceUtilitaire.trierAsc("date");
+            serviceUtilitaire.trierAsc("date");
         } else if (ordreDeTri.equals("desc")) {
-            return serviceUtilitaire.trierDesc("date");
+            serviceUtilitaire.trierDesc("date");
         } else {
             System.out.println("Erreur : ordre de tri non reconnu");
-            return null;
         }
     }
 
-    public ArrayList<Client> trierClientsParSolde(String ordreDeTri) {
+    public void trierClientsParSolde(String ordreDeTri) {
         ServiceUtilitaire serviceUtilitaire = new ServiceUtilitaire(ServiceQOL.banque);
         if (ordreDeTri.equals("asc")) {
-            return serviceUtilitaire.trierAsc("solde");
+            serviceUtilitaire.trierAsc("solde");
         } else if (ordreDeTri.equals("desc")) {
-            return serviceUtilitaire.trierDesc("solde");
+            serviceUtilitaire.trierDesc("solde");
         } else {
             System.out.println("Erreur : ordre de tri non reconnu");
-            return null;
         }
     }
 
-    public ArrayList<Client> trierClientsParNom(String ordreDeTri) {
+    public void trierClientsParNom(String ordreDeTri) {
         ServiceUtilitaire serviceUtilitaire = new ServiceUtilitaire(ServiceQOL.banque);
         if (ordreDeTri.equals("asc")) {
-            return serviceUtilitaire.trierAsc("nom");
+            serviceUtilitaire.trierAsc("nom");
         } else if (ordreDeTri.equals("desc")) {
-            return serviceUtilitaire.trierDesc("nom");
+            serviceUtilitaire.trierDesc("nom");
         } else {
             System.out.println("Erreur : ordre de tri non reconnu");
-            return null;
         }
     }
 }

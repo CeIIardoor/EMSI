@@ -2,7 +2,7 @@ package Service;
 
 import Model.Banque;
 
-public class ServiceBanque{
+public class ServiceBanque implements IServiceBanque {
     private static Banque banque;
 
     public ServiceBanque(Banque _banque){
@@ -17,9 +17,7 @@ public class ServiceBanque{
     }
 
     public void afficherComptes(){
-        for (int i = 0; i < banque.getComptes().size(); i++) {
-            System.out.println(banque.getComptes().get(i));
-        }
+        System.out.println(banque.getComptes());
     }
 
     public void afficherClients(){

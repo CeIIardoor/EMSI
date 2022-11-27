@@ -8,19 +8,6 @@ import Model.Compte;
 import java.util.Scanner;
 
 public class ServiceCRUD {
-    /* - Service CRUD :: (création, consultation, modification et suppression)
-    public Compte créerEtAjouterCompte(Scanner clavier)
-    public Client créerEtAjouterNouveauClient(Scanner clavier)
-    public void lierCompteAuClient (int idClient, int idCompte)
-    public Compte chercherUnCompte(Scanner clavier)
-    public Compte chercherUnClient(Scanner clavier)
-    public void consulterDétailCompte(Scanner clavier)
-    public void consulterDétailClient(Scanner clavier)
-    public Compte modifierCompte(Scanner clavier)
-    public Client modifierClient(Scanner clavier)
-    public boolean supprimerCompte(Scanner clavier)
-    public boolean supprimerClient(Scanner clavier)
-     */
     private static Banque banque;
 
     public ServiceCRUD(Banque _banque){
@@ -36,7 +23,7 @@ public class ServiceCRUD {
         return null;
     }
 
-    public Compte creerEtAjouterCompte(){
+    public void creerEtAjouterCompte(){
         System.out.println("Client existant ? (o/n)");
         Scanner clavier = new Scanner(System.in);
         String reponse = clavier.nextLine();
@@ -47,29 +34,23 @@ public class ServiceCRUD {
             if (client != null){
                 Compte compte = new Compte(client);
                 banque.getComptes().add(compte);
-                return compte;
             }
             else {
                 System.out.println("Client inexistant");
-                return null;
             }
         }
         else if (reponse.equals("n")){
-            Compte compte = new Compte();
-            banque.ajouterCompte(compte);
-            return compte;
+            new Compte();
         }
         else {
             System.out.println("Réponse invalide");
-            return null;
         }
     }
 
-    public Client creerEtAjouterClient(){
+    public void creerEtAjouterClient(){
         Client client = new Client();
         banque.ajouterClient(client);
         System.out.println("Client " + client.getIdClient() + "créé et ajouté à" + banque.getNomAgence());
-        return client;
     }
 
     public void lierCompteAuClient(int idClient, int idCompte){
@@ -138,7 +119,7 @@ public class ServiceCRUD {
         }
     }
 
-    public Compte modifierCompte(int idCompte){
+    public void modifierCompte(int idCompte){
         Compte compteAModifier = getCompteById(idCompte);
         if (compteAModifier != null){
             do {
@@ -147,14 +128,12 @@ public class ServiceCRUD {
                 compteAModifier.setSolde(s);
             } while (compteAModifier.getSolde() < 0);
             System.out.println("Compte " + compteAModifier.getIdCompte() + " modifié");
-            return compteAModifier;
         } else {
             System.out.println("Compte inexistant");
-            return null;
         }
     }
 
-    public Client modifierClient(int idClient){
+    public void modifierClient(int idClient){
         Client clientAModifier = getClientById(idClient);
         if (clientAModifier != null){
             Scanner sc = new Scanner(System.in);
@@ -167,35 +146,28 @@ public class ServiceCRUD {
                 clientAModifier.setEmail(sc.nextLine());
             } while (!clientAModifier.getEmail().matches("^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\\.[a-z]{2,4}$"));
             System.out.println("Client " + clientAModifier.getIdClient() + " modifié");
-            return clientAModifier;
         } else {
             System.out.println("Client inexistant");
-            return null;
         }
     }
 
-    public boolean supprimerCompte(int idCompte){
+    public void supprimerCompte(int idCompte){
         Compte compte = getCompteById(idCompte);
         if (compte != null){
-            banque.supprimerCompte(compte);
+            banque.getComptes().remove(compte);
             System.out.println("Compte " + compte.getIdCompte() + " supprimé");
-            return true;
         } else {
             System.out.println("Compte inexistant");
-            return false;
         }
     }
 
-    public boolean supprimerClient(int idClient){
+    public void supprimerClient(int idClient){
         Client client = getClientById(idClient);
         if (client != null){
             client.getComptes().clear();
             banque.supprimerClient(client);
-            System.out.println("Client " + client.getIdClient() + " supprimé");
-            return true;
         } else {
             System.out.println("Client inexistant");
-            return false;
         }
     }
 
