@@ -1,20 +1,8 @@
 package Model;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 
-public class Client {
-    /*
-    Attributs : idClient, nom, prénom, email, tableau de journalisation et
-    un tableau de comptes
-    Accès : getters, setters
-    (email doit être conforme au format Email)
-    (id doit être auto-généré)
-    Méthodes : public String toString(),
-    public boolean equals(Object autreClient)
-     */
+public class Client extends User {
     private static int cmpClients = 1;
     private final int idClient;
     private String nom;
@@ -62,8 +50,11 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client [idClient=" + idClient + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email
-                + ", journalisation=" + journalisation + " ]";
+        return "Client [idClient=" + idClient + '\n' +
+                ", nom=" + nom + '\n' +
+                ", prenom=" + prenom + '\n' +
+                ", email=" + email + '\n' +
+                " ]";
     }
 
     @Override
@@ -86,18 +77,26 @@ public class Client {
         do {
             System.out.println("Entrer l'email du client : ");
             this.email = new Scanner(System.in).nextLine();
+            super.setLogin(email);
         } while (!this.email.matches("^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\\.[a-z]{2,4}$"));
+        do {
+            System.out.println("Entrer le MDP du client ");
+            super.setPassword(new Scanner(System.in).nextLine());
+        } while (!super.getPassword().matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{8,}$"));
+        super.setRole("client");
         this.idClient = cmpClients++;
         this.journalisation = new ArrayList<>();
         this.comptes = new ArrayList<>(2);
         this.dateAjout = new Date();
         this.journalisation.add("Création du client le " + new Date());
     }
-    public Client(String nom, String prenom, String email) {
+    public Client(String nom, String prenom, String email, String password) {
         this.idClient = cmpClients++;
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
+        super.setLogin(email);
+        super.setPassword(password);
         this.dateAjout = new Date();
         this.journalisation = new ArrayList<>();
         this.comptes = new ArrayList<>(2);
@@ -118,5 +117,9 @@ public class Client {
              sum += compte.getSolde();
         }
         return sum;
+    }
+
+    public ArrayList<String> getJournalisation() {
+        return journalisation;
     }
 }

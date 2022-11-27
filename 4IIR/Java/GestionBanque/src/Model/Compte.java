@@ -106,12 +106,11 @@ public class Compte {
     }
     @Override
     public String toString() {
-        return "Compte[" +
-                "idCompte=" + idCompte +
-                ", solde=" + solde +
+        return "Compte[" + '\n' +
+                "idCompte=" + idCompte + '\n' +
+                ", solde=" + solde + '\n' +
                 ", dateCreation='" + dateCreation + '\n' +
-                ", journalisation=" + journalisation +
-                ", proprietaire=" + proprietaire +
+                ", proprietaire=" + proprietaire + '\n' +
                 ']';
     }
 

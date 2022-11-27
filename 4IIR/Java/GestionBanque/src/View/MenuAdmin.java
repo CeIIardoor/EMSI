@@ -1,4 +1,4 @@
-package Controller;
+package View;
 
 import Model.Banque;
 import Model.Compte;
@@ -6,10 +6,10 @@ import Service.*;
 
 import java.util.Scanner;
 
-public class MenuBanque implements IMenuBanque {
+public class MenuAdmin implements IMenuAdmin {
     private static Banque banque;
 
-    public MenuBanque(Banque _banque){
+    public MenuAdmin(Banque _banque){
         banque = _banque;
     }
 
@@ -17,14 +17,13 @@ public class MenuBanque implements IMenuBanque {
         int choix;
         do{
             System.out.println("Bienvenue dans la banque " + banque.getNomAgence());
-            MenuBanque.afficherMenuBanque();
+            MenuAdmin.afficherMenuBanque();
             ServiceBanque serviceBanque = new ServiceBanque(banque);
             ServiceCRUD serviceCRUD = new ServiceCRUD(banque);
             choix = new Scanner(System.in).nextInt();
             switch (choix) {
                 case 1:
                     serviceBanque.afficherBanque();
-                    new Scanner(System.in).nextLine();
                     break;
                 case 2:
                     serviceBanque.afficherClients();
@@ -33,7 +32,7 @@ public class MenuBanque implements IMenuBanque {
                     serviceBanque.afficherComptes();
                     break;
                 case 4:
-                    MenuBanque.afficherMenuCRUD();
+                    MenuAdmin.afficherMenuCRUD();
                     choix = new Scanner(System.in).nextInt();
                     switch (choix) {
                         case 1:
@@ -87,7 +86,7 @@ public class MenuBanque implements IMenuBanque {
                     }
                     break;
                 case 5:
-                    MenuBanque.afficherMenuTransactionnel();
+                    MenuAdmin.afficherMenuTransactionnel();
                     ServiceTransactionnel serviceTransactionnel = new ServiceTransactionnel(banque);
                     choix = new Scanner(System.in).nextInt();
                     switch (choix) {
@@ -126,7 +125,7 @@ public class MenuBanque implements IMenuBanque {
                     }
                     break;
                 case 6:
-                    MenuBanque.afficherMenuUtilitaire();
+                    MenuAdmin.afficherMenuUtilitaire();
                     ServiceUtilitaire serviceUtilitaire = new ServiceUtilitaire(banque);
                     choix = new Scanner(System.in).nextInt();
                     switch (choix) {
@@ -182,7 +181,7 @@ public class MenuBanque implements IMenuBanque {
                     break;
 
                 case 7:
-                    MenuBanque.afficherMenuQOL();
+                    MenuAdmin.afficherMenuQOL();
                     ServiceQOL serviceQOL = new ServiceQOL(banque);
                     choix = new Scanner(System.in).nextInt();
                     switch (choix) {
