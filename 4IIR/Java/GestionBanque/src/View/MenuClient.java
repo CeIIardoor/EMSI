@@ -61,7 +61,6 @@ public class MenuClient implements IMenuClient {
         } else {
             System.out.println("Mot de passe incorrect");
         }
-        afficherMenuPrincipale();
     }
 
     private void afficherInfos() {

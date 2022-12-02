@@ -44,33 +44,24 @@ int delim(string chaine, int i)
     }
 }
 
-void analyse(string chaine)
-{
-    int i = 0;
-    while (true)
-        {
-            while (true)
-            {
-                if(chaine[i] == ' ' || chaine[i] == '\t'){
-                    i = delim(chaine, i);
-                }
-            }
-        }
-}
 
 void identificateur(string chaine){
-    int etat = 0;
-    while(true){
+
+
+ int i = 0 , etat=0 ;
+    while (true)
+    {
         switch (etat)
         {
             case 0:
-                if(isalpha(chaine[i])){
-                    etat = 1;
+                if(isalpha(chaine[i])){ 
+                    etat=2;
+                   
                     i++;
                 }
                 break;
             case 1:
-                if(isalpha(chaine[i]) || isdigit(chaine[i])){
+                if(alpha()){
                     i++;
                 } else {
                     etat = 2;
@@ -80,4 +71,18 @@ void identificateur(string chaine){
                 return i;
         }
     }
+
+
+
+
+
+
+    
+}
+
+
+void analyse(string chaine)
+{
+
+    
 }
