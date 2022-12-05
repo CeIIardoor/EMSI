@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         System.out.println("____________SETUP____________");
-        Banque banque = new Banque("Banque de Test", "banque@test.com", 1000);
+        Banque banque = new Banque("Banque de Test", "banque@test.com", 100);
         Client client1 = new Client("Client1", "Test", "client1@test.com", "123456");
         Client client2 = new Client("Client2", "Test", "client2@test.com", "123456");
         Client client3 = new Client("Client3", "Test", "client3@test.com", "123456");
@@ -29,9 +29,9 @@ public class Main {
         client2.ajouterCompte(compte2);
         client3.ajouterCompte(compte3);
 
-        AuthController authController = new AuthController(banque);
         System.out.println("_____________________________________");
 
+        AuthController authController = new AuthController(banque);
         int choix;
         do {
             MenuAuth.afficherMenuAuth();
@@ -41,32 +41,22 @@ public class Main {
                 String login = new Scanner(System.in).nextLine();
                 System.out.println("Entrer votre mot de passe");
                 String password = new Scanner(System.in).nextLine();
-                User currentUser = authController.authenticateAdmin(login, password);
+                User currentUser = authController.authenticate(login, password);
                 if (currentUser != null && currentUser.getRole().equals("admin")) {
                     MenuAdmin menuAdmin = new MenuAdmin(banque);
                     menuAdmin.afficherMenuPrincipale();
-                } else {
-                    System.out.println("Login ou mot de passe incorrect");
-                }
-            } else if (choix == 2) {
-                System.out.println("Entrer votre login");
-                String login = new Scanner(System.in).nextLine();
-                System.out.println("Entrer votre mot de passe");
-                String password = new Scanner(System.in).nextLine();
-                User currentUser = authController.authenticateClient(login, password);
-                if (currentUser instanceof Client) {
-                    System.out.println("Bienvenue " + currentUser.getLogin());
-                    MenuClient menuClient = new MenuClient(banque, currentUser);
+                } else if (currentUser != null && currentUser.getRole().equals("client")) {
+                    MenuClient menuClient = new MenuClient(banque, (Client) currentUser);
                     menuClient.afficherMenuPrincipale();
                 } else {
-                    System.out.println("Login ou mot de passe incorrect");
+                System.out.println("Login ou mot de passe incorrect");
                 }
-            } else if (choix == 3) {
+            } else if (choix == 9) {
                 System.out.println("Au revoir");
             } else {
                 System.out.println("Choix invalide");
             }
-        } while (choix != 3);
+        } while (choix != 9);
 
 
 

@@ -62,18 +62,11 @@ public class MenuAdmin implements IMenuAdmin {
                             serviceCRUD.supprimerCompte(compteID2);
                             break;
                         case 7:
-                            System.out.println("Entrer l'ID du client a lier");
-                            int clientID3 = new Scanner(System.in).nextInt();
-                            System.out.println("Entrer l'ID du compte a lier");
-                            int compteID3 = new Scanner(System.in).nextInt();
-                            serviceCRUD.lierCompteAuClient(clientID3, compteID3);
-                            break;
-                        case 8:
                             System.out.println("Entrer l'ID du client a consulter");
                             int compteID4 = new Scanner(System.in).nextInt();
                             serviceCRUD.consulterDetailClient(compteID4);
                             break;
-                        case 9:
+                        case 8:
                             System.out.println("Entrer l'ID du compte a consulter");
                             int compteID5 = new Scanner(System.in).nextInt();
                             serviceCRUD.consulterDetailCompte(compteID5);
@@ -125,12 +118,11 @@ public class MenuAdmin implements IMenuAdmin {
                     }
                     break;
                 case 6:
-                    MenuAdmin.afficherMenuUtilitaire();
-                    ServiceUtilitaire serviceUtilitaire = new ServiceUtilitaire(banque);
+                    ServiceTri serviceTri = new ServiceTri(banque);
+                    MenuAdmin.afficherMenuTri();
                     choix = new Scanner(System.in).nextInt();
                     switch (choix) {
                         case 1:
-
                             System.out.println("Trier par :");
                             System.out.println("1. Nom");
                             System.out.println("2. Solde");
@@ -138,18 +130,19 @@ public class MenuAdmin implements IMenuAdmin {
                             choix = new Scanner(System.in).nextInt();
                             switch (choix) {
                                 case 1:
-                                    serviceUtilitaire.trierAsc("Nom");
+                                    serviceTri.trierAsc("Nom");
                                     break;
                                 case 2:
-                                    serviceUtilitaire.trierAsc("Solde");
+                                    serviceTri.trierAsc("Solde");
                                     break;
                                 case 3:
-                                    serviceUtilitaire.trierAsc("Date");
+                                    serviceTri.trierAsc("Date");
                                     break;
                                 default:
                                     System.out.println("Choix invalide");
                                     break;
                             }
+                            break;
 
                         case 2:
                             System.out.println("Trier par :");
@@ -159,13 +152,13 @@ public class MenuAdmin implements IMenuAdmin {
                             choix = new Scanner(System.in).nextInt();
                             switch (choix) {
                                 case 1:
-                                    serviceUtilitaire.trierDesc("Nom");
+                                    serviceTri.trierDesc("Nom");
                                     break;
                                 case 2:
-                                    serviceUtilitaire.trierDesc("Solde");
+                                    serviceTri.trierDesc("Solde");
                                     break;
                                 case 3:
-                                    serviceUtilitaire.trierDesc("Date");
+                                    serviceTri.trierDesc("Date");
                                     break;
                                 default:
                                     System.out.println("Choix invalide");
@@ -181,41 +174,21 @@ public class MenuAdmin implements IMenuAdmin {
                     break;
 
                 case 7:
-                    MenuAdmin.afficherMenuQOL();
-                    ServiceQOL serviceQOL = new ServiceQOL(banque);
+                    MenuAdmin.afficherMenuUtilitaire();
+                    ServiceUtilitaire serviceUtilitaire = new ServiceUtilitaire(banque);
                     choix = new Scanner(System.in).nextInt();
                     switch (choix) {
                         case 1:
                             System.out.println("Consulter informations Banque");
-                            serviceQOL.consulterInformationsBanque();
+                            serviceUtilitaire.consulterInformationsBanque();
                             break;
                         case 2:
                             System.out.println("Lister les clients");
-                            serviceQOL.listerClientsDeLaBanque();
+                            serviceUtilitaire.listerClientsDeLaBanque();
                             break;
                         case 3:
-                            System.out.println("Trier les clients par nom (ASC)");
-                            serviceQOL.trierClientsParNom("asc");
-                            break;
-                        case 4:
-                            System.out.println("Trier les clients par nom (DESC)");
-                            serviceQOL.trierClientsParNom("desc");
-                            break;
-                        case 5:
-                            System.out.println("Trier les clients par solde (ASC)");
-                            serviceQOL.trierClientsParSolde("asc");
-                            break;
-                        case 6:
-                            System.out.println("Trier les clients par solde (DESC)");
-                            serviceQOL.trierClientsParSolde("desc");
-                            break;
-                        case 7:
-                            System.out.println("Trier les clients par date (ASC)");
-                            serviceQOL.trierClientsParDate("asc");
-                            break;
-                        case 8:
-                            System.out.println("Trier les clients par date (DESC)");
-                            serviceQOL.trierClientsParDate("desc");
+                            System.out.println("Lister les comptes");
+                            serviceUtilitaire.listerComptesDeLaBanque();
                             break;
                         case 0:
                             break;
@@ -239,8 +212,8 @@ public class MenuAdmin implements IMenuAdmin {
         System.out.println("|___| Infos |_____________________________________| Services |__________________|");
         System.out.println("| 1. Afficher la banque                       | 4. Service CRUD                 |");
         System.out.println("| 2. Afficher les clients                     | 5. Service Transactionnel       |");
-        System.out.println("| 3. Afficher les comptes                     | 6. Service Utilitaire           |");
-        System.out.println("|                                             | 7. Service QOL                  |");
+        System.out.println("| 3. Afficher les comptes                     | 6. Service Tri                  |");
+        System.out.println("|                                             | 7. Service Utilitaire           |");
         System.out.println("|                               9. Quitter                                      |");
         System.out.println("________________________________________________________________________________");
         System.out.println("Entrer votre choix : ");
@@ -259,13 +232,13 @@ public class MenuAdmin implements IMenuAdmin {
         System.out.println("Entrer votre choix : ");
     }
 
-    public static void afficherMenuQOL(){
+    public static void afficherMenuUtilitaire(){
         System.out.println("________________________________________________________________________________");
-        System.out.println("|_______________________________| MENU QOL |____________________________________|");
+        System.out.println("|_______________________________| MENU UTILITAIRE |____________________________________|");
         System.out.println("|_______________________________________________________________________________|");
-        System.out.println("| 1. Afficher les comptes d'un client       | 4. Afficher les clients par type  |");
-        System.out.println("| 2. Afficher les clients d'un compte       | 5. Afficher les comptes par solde |");
-        System.out.println("| 3. Afficher les comptes par type          | 6. Afficher les clients par solde |");
+        System.out.println("| 1. Consulter les infos de la banque                                           |");
+        System.out.println("| 2. Afficher les clients de la banque                                          |");
+        System.out.println("| 3. Afficher les comptes de la banque                                          |");
         System.out.println("|                                     0. Retour                                 |");
         System.out.println("________________________________________________________________________________");
         System.out.println("Entrer votre choix : ");
@@ -283,9 +256,9 @@ public class MenuAdmin implements IMenuAdmin {
         System.out.println("Entrer votre choix : ");
     }
 
-    public static void afficherMenuUtilitaire(){
+    public static void afficherMenuTri(){
         System.out.println("________________________________________________________________________________");
-        System.out.println("|_______________________________| MENU UTILITAIRE |_____________________________|");
+        System.out.println("|__________________________________| MENU Tri |_________________________________|");
         System.out.println("|_______________________________________________________________________________|");
         System.out.println("| 1. Trier ascendant les clients                                                |");
         System.out.println("| 2. Trier descendant les clients                                               |");

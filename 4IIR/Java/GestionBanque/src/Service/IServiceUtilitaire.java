@@ -1,11 +1,8 @@
 package Service;
 
-import Model.Client;
-
-import java.util.ArrayList;
-
 public interface IServiceUtilitaire {
-    public ArrayList<Client> trierAsc(String trierPar);
+    void consulterInformationsBanque();
+    void listerClientsDeLaBanque();
 
-    public ArrayList<Client> trierDesc(String trierPar);
+    void listerComptesDeLaBanque();
 }

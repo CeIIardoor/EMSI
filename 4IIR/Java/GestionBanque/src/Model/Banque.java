@@ -101,4 +101,15 @@ public class Banque{
             System.out.println("Impossible de supprimer le client " + client.getIdClient());
         }
     }
+
+    public Compte getCompteByID(int numCompte) {
+        for (Client client : clients) {
+            for (Compte compte : client.getComptes()) {
+                if (compte.getIdCompte() == numCompte) {
+                    return compte;
+                }
+            }
+        }
+        return null;
+    }
 }

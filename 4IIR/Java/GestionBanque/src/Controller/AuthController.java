@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.Admin;
 import Model.Banque;
 import Model.Client;
 import Model.User;
@@ -11,14 +12,11 @@ public class AuthController implements IAuthController {
         banque = _banque;
     }
 
-    public User authenticateAdmin(String login, String password) {
-        if (login.equals("admin@banque.com") && password.equals("admin")) {
-            return new User(login, password, "admin");
+    public User authenticate(String login, String password) {
+        Admin admin = Admin.getInstance();
+        if (admin.getLogin().equals(login) && admin.getPassword().equals(password)) {
+            return admin;
         }
-        return null;
-    }
-
-    public User authenticateClient(String login, String password) {
         for (Client client : banque.getClients()) {
             if (client.getEmail().equals(login) && client.getPassword().equals(password)) {
                 return client;
@@ -26,4 +24,5 @@ public class AuthController implements IAuthController {
         }
         return null;
     }
+
 }

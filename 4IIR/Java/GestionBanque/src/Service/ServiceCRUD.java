@@ -32,18 +32,24 @@ public class ServiceCRUD {
             int idCompte = clavier.nextInt();
             Client client = getClientById(idCompte);
             if (client != null){
-                Compte compte = new Compte(client);
-                banque.getComptes().add(compte);
+                System.out.println("Entrer le solde du compte : ");
+                double solde = clavier.nextDouble();
+                client.getComptes().add(new Compte(client,solde));
             }
             else {
                 System.out.println("Client inexistant");
             }
         }
         else if (reponse.equals("n")){
-            new Compte();
+            Client client = new Client();
+            System.out.println("Entrer le solde initial du compte : ");
+            double solde = clavier.nextDouble();
+            client.getComptes().add(new Compte(client,solde));
+            banque.getClients().add(client);
         }
         else {
             System.out.println("Réponse invalide");
+
         }
     }
 

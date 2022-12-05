@@ -59,7 +59,6 @@ public class Compte {
 
     public Compte(){
         idCompte = cmpCompte++;
-        proprietaire = new Client();
         do{
             System.out.println("Entrer le solde initial du compte " + idCompte + " : ");
             solde = new Scanner(System.in).nextDouble();
@@ -90,14 +89,14 @@ public class Compte {
         if(solde != 0){
             journalisation.add("Dépôt de " + solde + "dh");
         }
-        this.proprietaire = proprietaire;
+        this.proprietaire.getComptes().add(this);
     }
 
     public Compte(Client proprietaire, double solde){
         idCompte = cmpCompte++;
         this.solde = solde;
         dateCreation = new Date();
-        journalisation = new ArrayList<String>();
+        journalisation = new ArrayList<>();
         journalisation.add("Création du compte le " + dateCreation);
         if(solde != 0){
             journalisation.add("Dépôt de " + solde + "dh");
@@ -109,7 +108,8 @@ public class Compte {
         return "Compte[" + '\n' +
                 "+ idCompte=" + idCompte + '\n' +
                 "- solde=" + solde + '\n' +
-                "- dateCreation='" + dateCreation + '\n' +
+                "- dateCreation= " + dateCreation.getDate() + "/" + (dateCreation.getMonth() + 1) + "/" + (dateCreation.getYear() + 1900) + '\n' +
+                "- proprietaire= " + proprietaire.getIdClient() + "- " + proprietaire.getNom() + '\n' +
                 ']';
     }
 

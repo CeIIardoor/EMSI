@@ -2,7 +2,9 @@ package View;
 
 import Model.Banque;
 import Model.Client;
+import Model.Compte;
 import Model.User;
+import Service.ServiceTransactionnel;
 
 import java.util.Scanner;
 
@@ -23,7 +25,8 @@ public class MenuClient implements IMenuClient {
             System.out.println("2. Consulter mes opérations");
             System.out.println("3. Consulter mes informations");
             System.out.println("4. Changer mon mot de passe");
-            System.out.println("5. Se déconnecter");
+            System.out.println("5. Service Transactionnel");
+            System.out.println("0. Se déconnecter");
             System.out.println("____________________________________________________");
             choix = new Scanner(System.in).nextInt();
             switch (choix) {
@@ -40,13 +43,72 @@ public class MenuClient implements IMenuClient {
                     afficherMenuChangePassword();
                     break;
                 case 5:
+                    afficherComptes();
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.println("Entrer le numéro du compte");
+                    int numCompte = scanner.nextInt();
+                    Compte compte = ((Client) user).getCompteByID(numCompte);
+                    if (compte != null) {
+                        afficherMenuTransactions(compte);
+                    } else {
+                        System.out.println("Compte introuvable");
+                    }
+                    break;
+                case 0:
                     break;
                 default:
                     System.out.println("Choix invalide");
                     afficherMenuPrincipale();
                     break;
             }
-        } while (choix != 5);
+        } while (choix != 0);
+    }
+
+    private void afficherMenuTransactions(Compte compte) {
+        int choix;
+        do {
+            System.out.println("____________________Menu Transaction______________________");
+            System.out.println("1. Déposer de l'argent");
+            System.out.println("2. Retirer de l'argent");
+            System.out.println("3. Virement");
+            System.out.println("0. Retour");
+            System.out.println("__________________________________________________________");
+            choix = new Scanner(System.in).nextInt();
+            ServiceTransactionnel serviceTransactionnel = new ServiceTransactionnel(banque);
+            switch (choix) {
+                case 1:
+                    System.out.println("Entrer le montant à déposer");
+                    double montant = new Scanner(System.in).nextDouble();
+                    serviceTransactionnel.verser(montant, compte);
+                    break;
+                case 2:
+                    System.out.println("Entrer le montant à retirer");
+                    montant = new Scanner(System.in).nextDouble();
+                    serviceTransactionnel.retirer(montant, compte);
+                    break;
+                case 3:
+                    banque.getComptes().forEach(
+                            c -> System.out.println(c.getIdCompte() + "- " + c.getProprietaire().getNom()
+                            ));
+                    System.out.println("Entrer le numéro du compte à créditer");
+                    int numCompte = new Scanner(System.in).nextInt();
+                    Compte compteCredite = banque.getCompteByID(numCompte);
+                    if (compteCredite != null) {
+                        System.out.println("Entrer le montant à virer");
+                        montant = new Scanner(System.in).nextDouble();
+                        serviceTransactionnel.effectuerUnVirement(montant, compte, compteCredite);
+                    } else {
+                        System.out.println("Compte introuvable");
+                    }
+                    break;
+                case 0:
+                    break;
+                default:
+                    System.out.println("Choix invalide");
+                    afficherMenuTransactions(compte);
+                    break;
+            }
+        } while (choix != 0);
     }
 
     private void afficherMenuChangePassword() {
@@ -93,6 +155,8 @@ public class MenuClient implements IMenuClient {
             System.out.println(i + 1 + ". " + client.getComptes().get(i).toString());
         }
         System.out.println("____________________________________________________");
-
     }
+
+
+
 }

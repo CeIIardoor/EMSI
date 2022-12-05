@@ -90,6 +90,10 @@ public class Client extends User {
         this.comptes = new ArrayList<>(2);
         this.dateAjout = new Date();
         this.journalisation.add("Création du client le " + new Date());
+        this.comptes = new ArrayList<>();
+//        System.out.println("Entrer le solde initial du compte : ");
+//        double s = new Scanner(System.in).nextDouble();
+//        this.comptes.add(new Compte(this,s));
     }
     public Client(String nom, String prenom, String email, String password) {
         this.idClient = cmpClients++;
@@ -100,12 +104,14 @@ public class Client extends User {
         super.setPassword(password);
         this.dateAjout = new Date();
         this.journalisation = new ArrayList<>();
-        this.comptes = new ArrayList<>(2);
+        this.comptes = new ArrayList<>(getMaxComptes());
         this.journalisation.add("Création du client le " + new Date());
+        this.comptes = new ArrayList<>();
+//        this.comptes.add(new Compte(this,0));
     }
 
     public int getMaxComptes() {
-        return 2;
+        return 3;
     }
 
     public Date getDateAjout() {
@@ -122,5 +128,14 @@ public class Client extends User {
 
     public ArrayList<String> getJournalisation() {
         return journalisation;
+    }
+
+    public Compte getCompteByID(int numCompte) {
+        for (Compte compte : comptes) {
+            if (compte.getIdCompte() == numCompte) {
+                return compte;
+            }
+        }
+        return null;
     }
 }
