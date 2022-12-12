@@ -1,4 +1,4 @@
-package BuilderDesignPattern;
+package Model;
 
 import java.util.ArrayList;
 

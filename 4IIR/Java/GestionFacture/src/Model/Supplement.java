@@ -1,4 +1,4 @@
-package BuilderDesignPattern;
+package Model;
 
 public class Supplement {
     private String nom;
