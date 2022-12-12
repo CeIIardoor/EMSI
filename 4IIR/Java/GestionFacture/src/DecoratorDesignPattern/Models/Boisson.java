@@ -25,4 +25,9 @@ public class Boisson extends CommandeDecorator implements IBoisson {
     private String decorateWithBoisson() {
         return toString();
     }
+
+    public double getTotal()
+    {
+        return super.getTotal() + this.prix;
+    }
 }

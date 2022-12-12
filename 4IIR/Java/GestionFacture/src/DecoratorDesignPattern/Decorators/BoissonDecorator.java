@@ -14,4 +14,8 @@ public abstract class BoissonDecorator implements IBoisson {
     public String decorate() {
         return boisson.decorate();
     }
+
+    public double getTotal() {
+        return boisson.getTotal();
+    }
 }

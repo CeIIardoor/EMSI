@@ -10,9 +10,6 @@ public class Commande implements ICommande {
         this.idCommande = id++;
     }
 
-    public int getIdCommande() {
-        return idCommande;
-    }
 
     @Override
     public String decorate() {
@@ -24,6 +21,9 @@ public class Commande implements ICommande {
         return "Commande " + idCommande + " : " + '\n';
     }
 
-
+    @Override
+    public double getTotal() {
+        return 0;
+    }
 
 }

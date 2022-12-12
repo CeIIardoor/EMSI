@@ -1,6 +1,7 @@
 package DecoratorDesignPattern.Models;
 
 import DecoratorDesignPattern.Decorators.BoissonDecorator;
+import DecoratorDesignPattern.Decorators.SupplementDecorator;
 import DecoratorDesignPattern.Interfaces.ISupplement;
 
 public class Supplement extends BoissonDecorator implements ISupplement {
@@ -13,14 +14,6 @@ public class Supplement extends BoissonDecorator implements ISupplement {
         this.prix = prix;
     }
 
-    public String getNom() {
-        return nom;
-    }
-
-    public double getPrix() {
-        return prix;
-    }
-
     public String toString() {
         return '\t' + " " + '\t' + " - Supplement " + this.nom + " : " + this.prix + "MAD" + '\n';
     }
@@ -29,6 +22,13 @@ public class Supplement extends BoissonDecorator implements ISupplement {
         return super.decorate() + decorateWithSupplement();
     }
     private String decorateWithSupplement() {
-        return toString();
+        return toString() + '\n' +
+                '\t' + " " + '\t' + " " + '\t' +
+                " => Total : " + getTotal() + "MAD" + '\n';
+    }
+
+    public double getTotal()
+    {
+        return super.getTotal() + this.prix;
     }
 }

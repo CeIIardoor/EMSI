@@ -14,4 +14,8 @@ public abstract class CommandeDecorator implements ICommande {
     public String decorate() {
         return commande.decorate();
     }
+
+    public double getTotal() {
+        return commande.getTotal();
+    }
 }
