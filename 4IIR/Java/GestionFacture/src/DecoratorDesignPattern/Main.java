@@ -12,7 +12,7 @@ public class Main {
         Supplement supplement1 = new Supplement(boisson1, "Chantilly", 5);
 //        Supplement supplement2 = new Supplement(supplement1, "Caramel", 5);
 
-        System.out.println(supplement1.decorate());
+        System.out.println(supplement1.cout());
         }
 
     }

@@ -17,11 +17,11 @@ public class Supplement extends BoissonDecorator implements ISupplement {
     public String toString() {
         return '\t' + " " + '\t' + " - Supplement " + this.nom + " : " + this.prix + "MAD" + '\n';
     }
-    public String decorate()
+    public String cout()
     {
-        return super.decorate() + decorateWithSupplement();
+        return super.cout() + coutWithSupplement();
     }
-    private String decorateWithSupplement() {
+    private String coutWithSupplement() {
         return toString() + '\n' +
                 '\t' + " " + '\t' + " " + '\t' +
                 " => Total : " + getTotal() + "MAD" + '\n';

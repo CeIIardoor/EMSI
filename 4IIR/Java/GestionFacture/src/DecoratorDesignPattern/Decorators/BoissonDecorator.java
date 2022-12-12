@@ -11,8 +11,8 @@ public abstract class BoissonDecorator implements IBoisson {
     }
 
     @Override
-    public String decorate() {
-        return boisson.decorate();
+    public String cout() {
+        return boisson.cout();
     }
 
     public double getTotal() {

@@ -11,8 +11,8 @@ public abstract class CommandeDecorator implements ICommande {
     }
 
     @Override
-    public String decorate() {
-        return commande.decorate();
+    public String cout() {
+        return commande.cout();
     }
 
     public double getTotal() {

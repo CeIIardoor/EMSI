@@ -12,7 +12,7 @@ public class Commande implements ICommande {
 
 
     @Override
-    public String decorate() {
+    public String cout() {
         return toString();
     }
 

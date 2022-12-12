@@ -1,7 +1,7 @@
 package DecoratorDesignPattern.Interfaces;
 
 public interface ISupplement {
-    String decorate();
+    String cout();
 
     double getTotal();
 }

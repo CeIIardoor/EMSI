@@ -10,8 +10,8 @@ public abstract class SupplementDecorator implements ISupplement {
     }
 
     @Override
-    public String decorate() {
-        return supplement.decorate();
+    public String cout() {
+        return supplement.cout();
     }
 
     public double getTotal() {

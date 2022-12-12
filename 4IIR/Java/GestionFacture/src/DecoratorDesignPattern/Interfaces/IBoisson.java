@@ -1,7 +1,7 @@
 package DecoratorDesignPattern.Interfaces;
 
 public interface IBoisson {
-    String decorate();
+    String cout();
 
     double getTotal();
 }

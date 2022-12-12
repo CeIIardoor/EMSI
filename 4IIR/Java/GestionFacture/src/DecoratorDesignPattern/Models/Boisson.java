@@ -14,15 +14,15 @@ public class Boisson extends CommandeDecorator implements IBoisson {
         this.prix = prix;
     }
 
-    public String decorate() {
-        return super.decorate() + decorateWithBoisson();
+    public String cout() {
+        return super.cout() + coutWithBoisson();
     }
 
     public String toString() {
         return '\t' + " " + '\t' + " + Boisson " + this.nom + " : " + this.prix + "MAD" + '\n';
     }
 
-    private String decorateWithBoisson() {
+    private String coutWithBoisson() {
         return toString();
     }
 
