@@ -1,6 +1,7 @@
 package Service;
 
 import Model.Banque;
+import Service.Interfaces.IServiceUtilitaire;
 
 public class ServiceUtilitaire implements IServiceUtilitaire {
 

@@ -2,6 +2,7 @@ package Service;
 
 import Model.Banque;
 import Model.Client;
+import Service.Interfaces.IServiceTri;
 
 import java.util.ArrayList;
 

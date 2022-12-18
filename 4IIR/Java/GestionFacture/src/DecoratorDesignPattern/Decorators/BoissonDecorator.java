@@ -1,5 +1,6 @@
 package DecoratorDesignPattern.Decorators;
 
+import DecoratorDesignPattern.Interfaces.ISupplement;
 import DecoratorDesignPattern.Models.Boisson;
 import DecoratorDesignPattern.Interfaces.IBoisson;
 

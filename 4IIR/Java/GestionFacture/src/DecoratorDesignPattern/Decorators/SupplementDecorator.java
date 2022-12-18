@@ -1,11 +1,12 @@
 package DecoratorDesignPattern.Decorators;
 
 import DecoratorDesignPattern.Interfaces.ISupplement;
+import DecoratorDesignPattern.Models.Supplement;
 
 public abstract class SupplementDecorator implements ISupplement {
-    private final ISupplement supplement;
+    private final Supplement supplement;
 
-    public SupplementDecorator(ISupplement _supplement) {
+    public SupplementDecorator(Supplement _supplement) {
         this.supplement = _supplement;
     }
 

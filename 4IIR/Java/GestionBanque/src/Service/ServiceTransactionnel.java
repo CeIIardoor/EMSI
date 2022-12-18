@@ -2,6 +2,7 @@ package Service;
 
 import Model.Banque;
 import Model.Compte;
+import Service.Interfaces.IServiceTransactionnel;
 
 public class ServiceTransactionnel implements IServiceTransactionnel {
     private static Banque banque;

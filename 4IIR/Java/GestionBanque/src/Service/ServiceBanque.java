@@ -1,6 +1,7 @@
 package Service;
 
 import Model.Banque;
+import Service.Interfaces.IServiceBanque;
 
 public class ServiceBanque implements IServiceBanque {
     private static Banque banque;

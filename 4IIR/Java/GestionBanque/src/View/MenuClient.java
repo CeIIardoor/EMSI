@@ -5,6 +5,7 @@ import Model.Client;
 import Model.Compte;
 import Model.User;
 import Service.ServiceTransactionnel;
+import View.Interfaces.IMenuClient;
 
 import java.util.Scanner;
 

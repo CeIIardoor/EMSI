@@ -17,6 +17,7 @@ public class Supplement extends BoissonDecorator implements ISupplement {
     public String toString() {
         return '\t' + " " + '\t' + " - Supplement " + this.nom + " : " + this.prix + "MAD" + '\n';
     }
+
     public String cout()
     {
         return super.cout() + coutWithSupplement();
