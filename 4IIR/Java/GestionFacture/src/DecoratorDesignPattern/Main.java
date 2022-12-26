@@ -13,6 +13,7 @@ public class Main {
             commande.commander(new Espresso(),
                     new Chocolat(new Sumatra()),
                     new Chocolat(new Chocolat(new Deca())),
+                    new Chocolat(new Chocolat(new Deca())),
                     new Espresso(),
                     new Bueno(),
                     new Colombia(),
