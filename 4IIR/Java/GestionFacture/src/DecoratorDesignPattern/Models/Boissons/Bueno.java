@@ -1,7 +1,7 @@
 package DecoratorDesignPattern.Models.Boissons;
 
 public class Bueno extends Boisson implements IPromotionnable {
-    private double pourcentagePromo = 0;
+    private double pourcentagePromo = 0;    
 
     public double getCout() {
         return 25 * (1 - pourcentagePromo);
