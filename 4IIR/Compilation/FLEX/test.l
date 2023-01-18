@@ -2,7 +2,7 @@
 #include <stdio.h>
 %}
 %%
-[ \t]+	{/* supprime les espaces et tabulations */ }
+[ \t\n]+	{/* supprime les espaces et tabulations */ }
 bslama	{exit(0);}
 %%
 int main(){
