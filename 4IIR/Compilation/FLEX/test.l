@@ -11,6 +11,6 @@ int main(){
 	
  	return 0;
 }
-int yywrap(){ // pour délimiter la fin de la chaine
+int yywrap(){ // pour delimiter la fin de la chaine
   return 1;
 }
