@@ -5,7 +5,6 @@
 \/\/.*\n { printf("il s'agit d'un commentaire en c (une seule ligne)"); }
 \/\*(.|n)*\*\/ { printf("il s'agit d'un commentaire en c (multi ligne)"); }
 .* { printf("commentaire invalide"); }
-
 %%
 int main(){
 	printf("donnez une chaine: ");
